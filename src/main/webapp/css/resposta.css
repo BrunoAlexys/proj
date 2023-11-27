@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --yellow: #F89805;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    background: #000;
+    padding: 28px calc(28px + 10px + 16px) 28px 28px;
+    border-radius: 10px;
+    position: relative;
+}
+.card-wrapper {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+.card {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.card .head {
+    display: flex;
+    grid-gap: 12px;
+    margin-bottom: 16px;
+}
+.card .profile h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+.card .profile p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+}
+.card .review {
+    flex-grow: 1;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.card .head img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card .ratings i {
+    color: var(--yellow);
+}
+.indicator {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+    justify-content: center;
+}
+.indicator a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: royalblue;
+    transition: all .3s ease;
+    opacity: .5;
+}
+.indicator a:hover {
+    opacity: 1;
+}
+.indicator a.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px royalblue;
+    opacity: 1;
+}
