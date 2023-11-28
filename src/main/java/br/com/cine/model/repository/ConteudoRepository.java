@@ -33,7 +33,7 @@ public class ConteudoRepository implements IConteudoRepository {
     @Override
     public List<Conteudo> listarFilmes() throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(manager -> {
-            return manager.createQuery("select c from Conteudo c where c.ativo = true", Conteudo.class).getResultList();
+            return manager.createQuery("select c from Conteudo c where c.ativo = true and c.tipoConteudo = 'Filmes'", Conteudo.class).getResultList();
         });
     }
 

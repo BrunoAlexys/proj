@@ -21,7 +21,9 @@ public class CineController extends HttpServlet {
         HttpSession session = req.getSession();
         boolean isLogado = session.getAttribute("usuarioLogado") == null;
         boolean isProtected = !(action.equalsIgnoreCase("LoginBean") || action.equalsIgnoreCase("LoginFormBean")
-                || action.equalsIgnoreCase("HomeBean") || action.equalsIgnoreCase("CadastroUsuarioBean"));
+                || action.equalsIgnoreCase("HomeBean") || action.equalsIgnoreCase("CadastroUsuarioBean")
+                || action.equalsIgnoreCase("FilmesBean") || action.equalsIgnoreCase("SeriesBean")
+                || action.equalsIgnoreCase("ListarFilmesBean"));
 
         if (isLogado && isProtected) {
             resp.sendRedirect("cine?action=LoginFormBean");

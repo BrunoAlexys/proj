@@ -6,6 +6,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <c:url value="/cine?action=ListarConteudoBean" var="listarConteudos"/>
+<c:url value="/cine?action=ExcluirConteudoBean" var="excluirConteudo"/>
+
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
@@ -20,65 +22,68 @@
     </style>
 </head>
 <body>
+<header>
 
-<%--body<%--%>
-<%--    List<Conteudo> conteudos = (List<Conteudo>) request.getAttribute("conteudos");--%>
-<%--    System.out.println(conteudos);--%>
-<%--%>--%>
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <h1 class="display-5 mb-4">Listagem</h1>
-            <table id="dataTable" class="table table-dark table-striped table-hover">
-                <thead>
-                <tr>
-                    <th>Categoria</th>
-                    <th>Título</th>
-                    <th>Descrição</th>
-                    <th>Duração</th>
-                    <th>Diretor</th>
-                    <th>Data de lançamento</th>
-                    <th>Gênero</th>
-                    <th>URL da imagem</th>
-                    <th>URL do trailer</th>
-                    <th>Ações</th>
-                </tr>
-                </thead>
-                <c:forEach items="${conteudos}" var="conteudo">
-                <tbody>
-                    <tr>
-                        <td>${conteudo.tipoConteudo}</td>
-                        <td>${conteudo.titulo}</td>
-                        <td>${conteudo.descricao}</td>
-                        <td>${conteudo.duracao}</td>
-                        <td>${conteudo.diretor}</td>
-                        <td>${conteudo.urlImg}</td>
-                        <td>${conteudo.urlTrailer}</td>
-                        <td>
-                            <button class="edit">Editar</button>
-                            <button class="delete">Excluir</button>
-                        </td>
-                    </tr>
-                </tbody>
-                </c:forEach>
-            </table>
-        </div>
+    <div id="brand">
+        <img id="logo" src="WhatsApp Image 2023-11-22 at 4.13.48 PM.jpeg" alt="Logo">
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-<script>
+    <h1 class="logoh1">Central de Administrador</h1>
+
+    <button class="btn-cadastrar" onclick="window.location.href='cine?action=FormCadastroBean'">Cadastrar</button>
+    <i class="fas fa-user-circle user-icon"></i>
+</header>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-10">
+<h1 class="display-5 mb-4">Listagem</h1>
+<table id="dataTable" class="table table-dark table-striped table-hover">
+<thead>
+<tr>
+    <th>Categoria</th>
+    <th>Título</th>
+    <th>Duração</th>
+    <th>Temporadas</th>
+    <th>Diretor</th>
+    <th>Data de lançamento</th>
+    <th>Gênero</th>
+    <th>Ações</th>
+</tr>
+</thead>
+<tbody>
+<c:forEach items="${conteudos}" var="conteudo">
+<tr>
+    <td>${conteudo.tipoConteudo}</td>
+    <td>${conteudo.titulo}</td>
+    <td>${conteudo.duracao}</td>
+    <td>${conteudo.temporadas}</td>
+    <td>${conteudo.diretor}</td>
+    <td>${conteudo.dataDeLancamento}</td>
+    <td>${conteudo.genero}</td>
+    <td>
+    <button class="edit">Editar</button>
+    <button class="delete" onclick="window.location.href='${excluirConteudo}&id=${conteudo.id}'">Excluir</button>
+    </td>
+    </tr>
+</c:forEach>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
     $(document).ready(function () {
-        $('#dataTable').DataTable({
-            "theme": "dark",
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/1.11.3/i18n/pt_br.json"
-            }
-        });
+    $('#dataTable').DataTable({
+    "theme": "dark",
+    "language": {
+    "url": "//cdn.datatables.net/plug-ins/1.11.3/i18n/pt_br.json"
+    }
     });
-</script>
+    });
+    </script>
 </body>
-</html>
+    </html>

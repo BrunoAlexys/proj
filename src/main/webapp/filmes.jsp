@@ -1,4 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page import="java.util.List, br.com.cine.model.entities.Conteudo" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<c:url value="/cine?action=ListarFilmesBean" var="listarFilmes"/>
 <html>
 <head>
     <link rel="stylesheet" href="css/filmes.css">
@@ -9,19 +15,19 @@
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
         <ul>
-            <a href="cine?action=HomeBean">
+            <a href="./index.html">
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesBean">
+            <a href="./filmes.html">
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=SeriesBean">
+            <a href="./Fotos.html">
                 <li>Series</li>
             </a>
 
-            <a href="cine?action=LoginFormBean">
+            <a href="./Comentario.html">
                 <li>Login</li>
             </a>
         </ul>
@@ -30,77 +36,16 @@
 
 <div class="main-containe">
     <div class="main-content" id="main-content">
+        <c:forEach var="filme" items="${filmes}">
         <a href="./selecionado.html">
             <div class="cards"
-                 style="background-image: url('https://image.tmdb.org/t/p/w220_and_h330_face/gmU7P3FzGFsl2wiSDhx9znZCNub.jpg');">
+                 style="background-image: url('${filme.urlImg}');">
                 <div class="character-name-bg">
-                    <span class="character-name"> The batman </span>
+                    <span class="character-name">${filme.titulo}</span>
                 </div>
             </div>
         </a>
-
-        <div class="cards"
-             style="background-image: url('https://media.fstatic.com/lcM9v4L1Re1uVx91qpzrKgxpSYI=/210x312/smart/filters:format(webp)/media/movies/covers/2023/07/cats_8Ki1W3h.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/3.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/4.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"> </span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/5.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/6.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/7.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/8.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/9.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards"
-             style="background-image: url('https://starwars-visualguide.com/assets/img/characters/10.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
+        </c:forEach>
     </div>
 </div>
 

@@ -1,112 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,300;0,500;1,300&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url(https://img.quizur.com/f/img63971f42bd1a35.27492124.jpg?lastEdited=1670848330);
-    margin: -20px 0 50px;
-    padding: 0;
 }
 
-.cadastro{
-    font-family: 'kdam Thmor Pro' , sans-serif ;
-    color: #fff;
-    text-align: center;
-    text-shadow: 3px 3px 5px #000;
-    letter-spacing: 2px;
-}
-
-header{
+header {
     height: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-nav{
-    width: 60%;
-}
-ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-li{
-    list-style: none;
-    color: aliceblue;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    font-family: 'kdam Thmor Pro' , sans-serif;
-}
-li:hover {
-    color: #d21617;
+    background-color: black;
+    color: #FFF;
 }
 
 #logo {
     width: 100px;
     height: 100%;
-    margin-top: 35px;
 }
 
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    background-color: #FFFFFF;
+#brand {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
+}
+
+.logoh1 {
+    text-align: center;
+    margin-left: 420px; /* Ajuste o valor conforme necessário */
+}
+
+
+h1 {
     text-align: center;
 }
 
-input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+.user-icon {
+    margin-left: 10px;
 }
 
-select{
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-}
-
-
-label {
-    font-weight: bold;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-button {
+.btn-cadastrar {
     border-radius: 20px;
-    border: 1px solid #d21617;
-    background-color: #d21617;
+    border: 1px solid rgba(24, 221, 17, 0.4);
+    background-color: rgba(24, 221, 17, 0.4);
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -114,18 +57,78 @@ button {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
+    margin-left: auto;
 }
 
-button:active {
+.btn-cadastrar:active {
     transform: scale(0.95);
 }
 
-button:focus {
+.btn-cadastrar:focus {
     outline: none;
 }
 
-button.ghost {
+.delete{
+    border-radius: 10px;
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin: 4px 2px;
+}
+
+button.delete {
+    background-color: #f44336;
+}
+
+button.delete:active {
+    transform: scale(0.95);
+}
+
+button.delete:focus {
+    outline: none;
+}
+
+button.delete.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
 }
+
+.edit{
+    border-radius: 10px;
+    border: 1px solid rgba(24, 221, 17, 0.4);
+    background-color: rgba(24, 221, 17, 0.4);
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin: 4px 2px;
+
+}
+
+button.edit {
+    background-color: rgba(24, 221, 17, 0.4);
+}
+
+button.edit:active {
+    transform: scale(0.95);
+}
+
+button.edit:focus {
+    outline: none;
+}
+
+button.edit.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
 

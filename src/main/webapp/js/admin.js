@@ -1,26 +1,25 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Adiciona um ouvinte de evento ao botão de adicionar filme
+    document.getElementById('addMovieBtn').addEventListener('click', addMovie);
+});
 
-function mudarTipoConteudo() {
-    const tipoConteudo = document.getElementById('tipoConteudo').value;
-    const temporadaContainer = document.getElementById('temporadaContainer');
-    const duracaoContainer = document.getElementById('duracaoContainer');
+// Função para adicionar um novo filme
+function addMovie() {
+    // Obtém a referência à tabela e à sua tbody
+    var table = document.getElementById('table').getElementsByTagName('tbody')[0];
 
-    if (tipoConteudo === 'filme') {
-        temporadaContainer.style.display = 'none';
-        duracaoContainer.style.display = 'block';
-    } else {
-        temporadaContainer.style.display = 'block';
-        duracaoContainer.style.display = 'none';
+    // Cria uma nova linha na tabela
+    var newRow = table.insertRow(table.rows.length);
+
+    // Adiciona células à nova linha
+    for (var i = 0; i < 8; i++) {
+        var cell = newRow.insertCell(i);
+        // Aqui você pode adicionar inputs ou placeholders para os novos filmes
+        cell.innerHTML = 'Novo Dado';
     }
-}
-function salvarCadastro() {
-    alert("Cadastro foi feito com sucesso");
-    // Aqui você pode adicionar a lógica para enviar os dados para o servidor, se necessário.
-}
 
-function limparFormulario() {
-    document.getElementById('cadastroForm').reset();
-    mudarTipoConteudo(); // Garante que o estado inicial seja consistente
-}
-function exibirMensagemSucesso() {
-    alert('Cadastro realizado com sucesso!');
+    // Adiciona célula de ações com botões de editar e excluir
+    var actionsCell = newRow.insertCell(8);
+    actionsCell.innerHTML = '<button class="edit" onclick="editMovie(' + (table.rows.length - 1) + ')">Editar</button>' +
+        '<button class="delete" onclick="deleteMovie(' + (table.rows.length - 1) + ')">Excluir</button>';
 }

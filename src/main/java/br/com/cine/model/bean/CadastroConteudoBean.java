@@ -40,14 +40,14 @@ public class CadastroConteudoBean implements TipoAcao {
                 var conteudo = new Conteudo(titulo, descricao, diretor, duracao, null, genero, data, urlImg,
                         urlTrailer, tipo);
                 cadastrar(conteudo);
-                this.resp.sendRedirect("cine?action=LoginFormBean");
+                this.resp.sendRedirect("cine?action=ListarConteudoBean");
             } else if (tipo.equalsIgnoreCase("Series")) {
                 var conteudo = new Conteudo(titulo, descricao, diretor, null, temporadas, genero, data, urlImg,
                         urlTrailer, tipo);
                 cadastrar(conteudo);
-                this.resp.sendRedirect("cine?action=LoginFormBean");
+                this.resp.sendRedirect("cine?action=ListarConteudoBean");
             } else {
-                this.resp.sendRedirect("cine?action=LoginFormBean");
+                this.resp.sendRedirect("cine?action=ListarConteudoBean");
                 throw new IllegalArgumentException("Tipo de conteudo invalido");
             }
         } catch (IllegalArgumentException e) {

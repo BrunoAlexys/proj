@@ -15,3 +15,16 @@ function exibirCamposEspecificos() {
         duracaoInput.required = false; // Remove o atributo required quando o campo é oculto
     }
 }
+
+function salvarCadastro() {
+    alert("Cadastro foi feito com sucesso");
+    // Aqui você pode adicionar a lógica para enviar os dados para o servidor, se necessário.
+}
+
+function limparFormulario() {
+    document.getElementById('cadastroForm').reset();
+    exibirCamposEspecificos(); // Garante que o estado inicial seja consistente
+}
+function exibirMensagemSucesso() {
+    alert('Cadastro realizado com sucesso!');
+}

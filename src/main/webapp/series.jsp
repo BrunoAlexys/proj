@@ -3,7 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/series.css">
-    <title>Title</title>
+    <title>Series</title>
 </head>
 <body>
 <header>
