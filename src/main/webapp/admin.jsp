@@ -1,8 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+
 <%@ page import="java.util.List, br.com.cine.model.entities.Conteudo" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<c:url value="/cine?action=ListarConteudoBean" var="conteudo"/>
+
+<c:url value="/cine?action=ListarConteudoBean" var="listarConteudos"/>
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
@@ -10,8 +13,19 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="css/admin.css">
     <title>Central do Administrador</title>
+    <style>
+        .buttons button {
+            margin-right: 15px;
+        }
+    </style>
 </head>
 <body>
+
+<%--body<%--%>
+<%--    List<Conteudo> conteudos = (List<Conteudo>) request.getAttribute("conteudos");--%>
+<%--    System.out.println(conteudos);--%>
+<%--%>--%>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -20,21 +34,21 @@
                 <thead>
                 <tr>
                     <th>Categoria</th>
-                    <th>TÃ­tulo</th>
-                    <th>DescriÃ§Ã£o</th>
-                    <th>DuraÃ§Ã£o</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Duração</th>
                     <th>Diretor</th>
-                    <th>Data de lanÃ§amento</th>
-                    <th>GÃªnero</th>
+                    <th>Data de lançamento</th>
+                    <th>Gênero</th>
                     <th>URL da imagem</th>
                     <th>URL do trailer</th>
-                    <th>AÃ§Ãµes</th>
+                    <th>Ações</th>
                 </tr>
                 </thead>
+                <c:forEach items="${conteudos}" var="conteudo">
                 <tbody>
-                <c:forEach items="${conteudo}" var="conteudo">
                     <tr>
-                        <td>${conteudo.tipoConteudo.descricao}</td>
+                        <td>${conteudo.tipoConteudo}</td>
                         <td>${conteudo.titulo}</td>
                         <td>${conteudo.descricao}</td>
                         <td>${conteudo.duracao}</td>
@@ -46,9 +60,8 @@
                             <button class="delete">Excluir</button>
                         </td>
                     </tr>
-                </c:forEach>
-
                 </tbody>
+                </c:forEach>
             </table>
         </div>
     </div>

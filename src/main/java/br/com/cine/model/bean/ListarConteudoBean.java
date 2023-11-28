@@ -33,7 +33,7 @@ public class ListarConteudoBean implements TipoAcao {
             e.printStackTrace();
         }
 
-        this.req.setAttribute("conteudo", listConteudo);
+        this.req.setAttribute("conteudos", listConteudo);
 
         RequestDispatcher dispatcher = this.req.getRequestDispatcher("/admin.jsp");
         dispatcher.forward(this.req, this.resp);

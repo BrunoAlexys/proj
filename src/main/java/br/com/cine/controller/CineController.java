@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -16,6 +17,17 @@ public class CineController extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
+
+        HttpSession session = req.getSession();
+        boolean isLogado = session.getAttribute("usuarioLogado") == null;
+        boolean isProtected = !(action.equalsIgnoreCase("LoginBean") || action.equalsIgnoreCase("LoginFormBean")
+                || action.equalsIgnoreCase("HomeBean") || action.equalsIgnoreCase("CadastroUsuarioBean"));
+
+        if (isLogado && isProtected) {
+            resp.sendRedirect("cine?action=LoginFormBean");
+            return;
+        }
+
         String fqn = null;
         System.out.println(action);
 

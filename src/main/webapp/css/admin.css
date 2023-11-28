@@ -1,51 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,300;0,500;1,300&display=swap');
+
+
 body {
     font-family: 'Montserrat', sans-serif;
+    background-image: url(https://img.quizur.com/f/img63971f42bd1a35.27492124.jpg?lastEdited=1670848330);
+    margin: -20px 0 50px;
+    padding: 0;
 }
 
-header {
-    background-color: #000;
-    color: white;
-    padding: 10px 0;
+.cadastro{
+    font-family: 'kdam Thmor Pro' , sans-serif ;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 5px #000;
+    letter-spacing: 2px;
+}
+
+header{
+    height: 90px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+nav{
+    width: 60%;
+}
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: 'kdam Thmor Pro' , sans-serif;
+}
+li:hover {
+    color: #d21617;
 }
 
 #logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
+    width: 100px;
+    height: 100%;
+    margin-top: 35px;
 }
 
-#brand {
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
-}
-
-#brand h1 {
-    margin-left: 10px;
-}
-
-.user-icon {
-    margin-left: 10px;
-}
-
-.btn-cadastrar {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 5px 15px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
 }
 
-.btn-cadastrar:active {
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+select{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #d21617;
+    background-color: #d21617;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
     transform: scale(0.95);
 }
 
-.btn-cadastrar:focus {
+button:focus {
     outline: none;
 }
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
