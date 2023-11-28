@@ -67,7 +67,7 @@ public class ConteudoRepository implements IConteudoRepository {
     }
 
     @Override
-    public void alterar(Optional<Conteudo> conteudo) throws SQLException {
+    public void alterar(Conteudo conteudo) throws SQLException {
         TransacaoUtil.executarTransacao(maneger -> maneger.merge(conteudo));
     }
 

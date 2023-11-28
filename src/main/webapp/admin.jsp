@@ -6,6 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <c:url value="/cine?action=ListarConteudoBean" var="listarConteudos"/>
+<c:url value="/cine?action=ListarConteudoPorIDBean" var="mostrarConteudo"/>
 <c:url value="/cine?action=ExcluirConteudoBean" var="excluirConteudo"/>
 
 <html>
@@ -61,7 +62,7 @@
     <td>${conteudo.dataDeLancamento}</td>
     <td>${conteudo.genero}</td>
     <td>
-    <button class="edit">Editar</button>
+    <button class="edit" onclick="window.location.href='${mostrarConteudo}&id=${conteudo.id}'">Editar</button>
     <button class="delete" onclick="window.location.href='${excluirConteudo}&id=${conteudo.id}'">Excluir</button>
     </td>
     </tr>

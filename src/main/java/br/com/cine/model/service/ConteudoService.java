@@ -33,7 +33,7 @@ public class ConteudoService {
         conteudoRepository.listarSeries();
     }
 
-    public void alterar(Optional<Conteudo> conteudo) throws SQLException {
+    public void alterar(Conteudo conteudo) throws SQLException {
         conteudoRepository.alterar(conteudo);
     }
 

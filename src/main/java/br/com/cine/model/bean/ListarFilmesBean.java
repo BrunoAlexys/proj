@@ -29,10 +29,11 @@ public class ListarFilmesBean implements TipoAcao {
         try {
             if (listFilmes != null && !listFilmes.isEmpty()) {
                 listFilmes = service.listarFilmes();
-                this.req.setAttribute("filmes", listFilmes);
             } else {
                 System.out.println("A lista de filmes está vazia ou nula.");
             }
+
+            this.req.setAttribute("filmes", listFilmes);
 
         } catch (Exception e) {
             e.printStackTrace();

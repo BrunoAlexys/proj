@@ -55,7 +55,7 @@ public class Conteudo {
     private String tipoConteudo;
 
     @Column(name = "avaliacao_id")
-    @OneToMany
+    @OneToMany(mappedBy = "conteudo", fetch = FetchType.EAGER)
     private List<Avaliacoes> listAvaliacoes;
 
     public Conteudo(String titulo, String descricao, String diretor, String duracao, String temporadas, String genero,
@@ -182,9 +182,20 @@ public class Conteudo {
 
     @Override
     public String toString() {
-        return "Conteudo [id=" + id + ", titulo=" + titulo + ", descricao=" + descricao + ", diretor=" + diretor
-                + ", duracao=" + duracao + ", temporadas=" + temporadas + ", genero=" + genero + ", dataDeLancamento="
-                + dataDeLancamento + ", urlImg=" + urlImg + ", urlTrailer=" + urlTrailer + ", ativo=" + ativo
-                + ", tipoConteudo=" + tipoConteudo + " ]";
+        return "Conteudo{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", diretor='" + diretor + '\'' +
+                ", duracao='" + duracao + '\'' +
+                ", temporadas='" + temporadas + '\'' +
+                ", genero='" + genero + '\'' +
+                ", dataDeLancamento=" + dataDeLancamento +
+                ", urlImg='" + urlImg + '\'' +
+                ", urlTrailer='" + urlTrailer + '\'' +
+                ", ativo=" + ativo +
+                ", tipoConteudo='" + tipoConteudo + '\'' +
+                ", listAvaliacoes=" + listAvaliacoes +
+                '}';
     }
 }

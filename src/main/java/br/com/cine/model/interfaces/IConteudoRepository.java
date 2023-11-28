@@ -13,6 +13,6 @@ public interface IConteudoRepository {
     List<Conteudo> listarTop10Filmes() throws SQLException;
     List<Conteudo> listarSeries() throws SQLException;
     List<Conteudo> listarTop10Series() throws SQLException;
-    void alterar(Optional<Conteudo> conteudo) throws SQLException;
+    void alterar(Conteudo conteudo) throws SQLException;
     void excluirPeloID(Long id) throws SQLException;
 }

@@ -37,7 +37,7 @@
         </select>
 
         <label for="titulo">Titulo:</label>
-        <input type="text" name="titulo" id="titulo" required="required">
+        <input type="text" name="titulo" id="titulo" value="" required="required">
 
         <label for="descricao">Descrição:</label>
         <textarea name="descricao" id="descricao" rows="4" required="required"></textarea>
