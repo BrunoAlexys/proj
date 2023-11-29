@@ -3,7 +3,8 @@
 <c:url value="/cine?action=AtualizarConteudoBean" var="atualizar"/>
 <html>
 <head>
-    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form-conteudo.css">
     <title>Alterar Conteudo</title>
 </head>
 <body>
@@ -11,24 +12,29 @@
     <img id="logo" src="WhatsApp Image 2023-10-28 at 16.29.28.jpeg" />
     <nav>
         <ul>
-            <a href="">
-                <li></li>
-            </a>
 
-            <a href="">
-                <li></li>
-            </a>
+            <h1 class="editarh">Editar</h1>
 
-            <a href="">
-                <li></li>
-            </a>
 
-            <a href="./login.html">
-                <li>Login</li>
-            </a>
+            </div>
         </ul>
     </nav>
+
+    <button id="optionsButton"><i class="fas fa-user"></i></button>
+    <div id="options-container">
+        <div class="option" onclick="Alterar()">Alterar</div>
+        <div class="option" onclick="sair()">Sair</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+        <script src="js/menu.js"></script>
+    </div>
 </header>
+
+
+<div class="arrow" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i>
+</div>
+
+
 <div class="container">
     <form id="cadastroForm" action="cine?action=AtualizarConteudoBean" method="post">
         <label for="tipoConteudo">Tipo do Conteúdo:</label>
@@ -70,27 +76,13 @@
         <input type="hidden" name="id" value="${cont.get().id}">
 
         <div class="buttons">
-            <button type="submit" onclick="salvarFormulario()">Alterar</button>
+            <button type="submit" onclick="salvarFormulario()">Editar</button>
             <button type="button" onclick="limparFormulario()">Limpar</button>
         </div>
+
+
     </form>
 </div>
-<script src="js/conteudo.js"></script>
-<script src="script.js"></script>
-
-<script>
-    function salvarCadastro() {
-        alert("Alterado com sucesso!");
-    }
-
-    function limparFormulario() {
-        document.getElementById('cadastroForm').reset();
-        exibirCamposEspecificos();
-    }
-
-    function salvarFormulario() {
-        salvarCadastro();
-    }
-</script>
+<script src="js/form-conteudo.js"></script>
 </body>
 </html>

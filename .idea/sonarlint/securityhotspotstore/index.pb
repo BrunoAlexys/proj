@@ -45,20 +45,8 @@ S
 #src/main/webapp/css/comentarios.css,7\9\799d332afa05303d6c258bbc610bbfb3a5fb34f2
 r
 Bsrc/main/java/br/com/cine/model/interfaces/IUsuarioRepository.java,e\5\e5944fcb7cba11de24b71adeef8215bb80e455bc
-i
-9src/main/java/br/com/cine/model/bean/SelecionadoBean.java,3\4\34f4b1252780658dcc85832ed1fcf69cbf5005ee
-e
-5src/main/java/br/com/cine/model/entities/Usuario.java,4\9\49d6345f9051b6696577ad67862f482788931377
-h
-8src/main/java/br/com/cine/model/entities/Avaliacoes.java,5\9\5935738d3539acce3104fdcf19437534ece8510b
-O
-src/main/webapp/selecionado.jsp,f\4\f4292f64c4710dc82f3c8d02a16d7ef244529a2b
-t
-Dsrc/main/java/br/com/cine/model/repository/AvaliacoesRepository.java,3\8\3822ccaa3259b14db653288e808ffbcd93fe7ab2
 k
 ;src/main/java/br/com/cine/model/service/EncriptarSenha.java,c\8\c88d1b04eea6697104a87056521f43025e926fd9
-u
-Esrc/main/java/br/com/cine/model/interfaces/IAvaliacoesRepository.java,d\6\d6df82ea4591587c784fc98f74fc938472d4ce02
 j
 :src/main/java/br/com/cine/model/bean/ResetarSenhaBean.java,d\d\ddb0701e9a2fbd0cc1bfe3282e9ab6dfd7a6eea8
 y
@@ -70,8 +58,6 @@ Isrc/main/java/br/com/cine/model/bean/EnviarRecuperacaoSenhaEmailBean.java,4\f\
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 4
 mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
-m
-=src/main/java/br/com/cine/model/service/AvaliacaoService.java,e\4\e4696885a34ba63d010438e0969ad9fba49aa240
 U
 %.mvn/wrapper/maven-wrapper.properties,3\2\32e074f71d16c1e88ac02aa83592ca6ad1fd98a8
 K
@@ -90,20 +76,12 @@ b
 2src/main/java/br/com/cine/model/bean/HomeBean.java,5\6\56e33d5c2a00c963c21a46fafd0ad31922f2bc39
 m
 =src/main/java/br/com/cine/model/bean/CadastroUsuarioBean.java,6\6\66a06e86ec75ae486e54c70fe08d0e88e0e1fe18
-k
-;src/main/java/br/com/cine/model/service/UsuarioService.java,f\b\fb6c4c1595fce252d8344a23f1e75bf4f846fecf
 q
 Asrc/main/java/br/com/cine/model/repository/UsuarioRepository.java,6\6\66d2124a79414ee0bb9f9e74d8cd232ff40709fa
-c
-3src/main/java/br/com/cine/model/bean/LoginBean.java,4\9\49741f5c187ea7fc420b3d327bc857317bc1420f
 I
 src/main/webapp/login.jsp,8\5\85ee523d01e5e19376db640e846c91bbcb0a1c22
 H
 src/main/webapp/home.jsp,6\8\6853166b9553bb500860233db274f93560c021c5
-J
-src/main/webapp/series.jsp,0\b\0b693fdf4ef2f065311f50bbd2dfdb39409f4f3a
-b
-2src/main/java/br/com/cine/model/service/Teste.java,5\8\5889c2943ff60265f1c1bf6b6f26b89a0a4fbf29
 M
 src/main/webapp/css/admin.css,0\e\0e5748376a4a18efd1d6342bfaad8a9b599e3399
 K

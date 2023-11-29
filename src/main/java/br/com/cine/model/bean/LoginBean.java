@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class LoginBean implements TipoAcao {
-    private static final String USUARIO_LOGADO_ATTRIBUTE = "usuarioLogado";
     private static final String ADMIN_EMAIL = "admin@gmail.com";
 
     private final HttpServletRequest req;
@@ -33,13 +32,11 @@ public class LoginBean implements TipoAcao {
             Optional<Usuario> usuarioEncontrado = service.buscarUsuarioPorEmailESenha(email, senha);
 
             if (usuarioEncontrado.isPresent()) {
-                Usuario usuario = usuarioEncontrado.get();
-
-                adicionarUsuarioNaSessao(usuario);
-
-                if (isAdmin(usuario)) {
+                if (isAdmin(usuarioEncontrado.get())) {
+                    adicionarUsuarioNaSessao(usuarioEncontrado.get());
                     resp.sendRedirect("cine?action=ListarConteudoBean");
                 } else {
+                    adicionarUsuarioNaSessao(usuarioEncontrado.get());
                     resp.sendRedirect("cine?action=HomeBean");
                 }
             } else {
@@ -59,7 +56,7 @@ public class LoginBean implements TipoAcao {
         HttpSession sessao = req.getSession();
 
         if (usuario != null) {
-            sessao.setAttribute(USUARIO_LOGADO_ATTRIBUTE, usuario);
+            sessao.setAttribute("usuarioLogado", usuario);
         } else {
             resp.sendRedirect("cine?action=LoginFormBean");
         }

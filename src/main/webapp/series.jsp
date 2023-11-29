@@ -31,7 +31,7 @@
 
 <div class="main-containe">
     <div class="main-content" id="main-content">
-        <a href="./selecionado.html">
+        <a href="cine?action=SelecionadoBean">
             <div class="cards"
                  style="background-image: url('https://image.tmdb.org/t/p/w220_and_h330_face/gmU7P3FzGFsl2wiSDhx9znZCNub.jpg');">
                 <div class="character-name-bg">

@@ -15,19 +15,19 @@
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
         <ul>
-            <a href="./index.html">
+            <a href="cine?action=HomeBean">
                 <li>Home</li>
             </a>
 
-            <a href="./filmes.html">
+            <a href="cine?action=FilmesBean">
                 <li>Filmes</li>
             </a>
 
-            <a href="./Fotos.html">
+            <a href="cine?action=SeriesBean">
                 <li>Series</li>
             </a>
 
-            <a href="./Comentario.html">
+            <a href="cine?action=LoginFormBean">
                 <li>Login</li>
             </a>
         </ul>

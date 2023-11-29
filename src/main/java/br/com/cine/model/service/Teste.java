@@ -2,11 +2,12 @@ package br.com.cine.model.service;
 
 public class Teste {
     public static void main(String[] args) {
-        ConteudoService service = new ConteudoService();
+        AvaliacaoService service = new AvaliacaoService();
+
         try {
-            System.out.println(service.listarFilmes());
+            service.cadastrarAvaliacao("Teste", "Teste", 4, 3L, 3L);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

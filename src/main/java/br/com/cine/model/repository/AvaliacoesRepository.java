@@ -1,6 +1,7 @@
 package br.com.cine.model.repository;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 import br.com.cine.model.entities.Avaliacoes;
 import br.com.cine.model.interfaces.IAvaliacoesRepository;
@@ -19,6 +20,12 @@ public class AvaliacoesRepository implements IAvaliacoesRepository {
             return Optional.ofNullable(
                     manager.createQuery("from Avaliacoes a where a.id = :id and a.ativo = true", Avaliacoes.class)
                             .setParameter("id", id).getSingleResult());
+        });
+    }
+
+    public List<Avaliacoes> listarAvaliacoes() throws SQLException {
+        return TransacaoUtil.executarTransacaoComRetorno(manager -> {
+            return manager.createQuery("select a from Avaliacoes a where a.ativo = true", Avaliacoes.class).getResultList();
         });
     }
 

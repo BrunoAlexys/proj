@@ -1,6 +1,7 @@
 package br.com.cine.model.service;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 import br.com.cine.model.entities.Avaliacoes;
 import br.com.cine.model.entities.Conteudo;
@@ -24,6 +25,11 @@ public class AvaliacaoService {
             Conteudo conteudo = conteudoEncontrado.get();
 
             Avaliacoes avaliacoes = new Avaliacoes();
+            avaliacoes.setTitulo(titulo);
+            avaliacoes.setAvaliacao(avaliacao);
+            avaliacoes.setClassificacao(classificacao);
+            avaliacoes.setUsuario(usuarioEncontrado.get());
+            avaliacoes.setConteudo(conteudoEncontrado.get());
 
             avaliacoesRepository.salvarAvaliacao(avaliacoes);
         } else {
@@ -33,6 +39,10 @@ public class AvaliacaoService {
 
     public Optional<Avaliacoes> buscarAvaliacaoPorID(Long id) throws SQLException {
         return avaliacoesRepository.buscarAvaliacaoPorID(id);
+    }
+
+    public List<Avaliacoes> listarAvaliacao() throws SQLException {
+        return avaliacoesRepository.listarAvaliacoes();
     }
 
     public void alterarAvaliacao(Avaliacoes avaliacoes) throws SQLException {

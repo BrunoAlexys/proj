@@ -1,5 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List, br.com.cine.model.entities.Avaliacoes" %>
+<c:url value="/cine?action=ListarAvaliacaoBean" var="listarAvaliacao"/>
 <html>
 <head>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -86,104 +89,33 @@
 </div>
 <div class="container">
     <div class="card-wrapper">
-        <div class="card">
-            <div class="head">
+        <c:forEach items="${avaliacoes}" var="avaliacao">
+            <div class="card">
+                <div class="head">
 
-                <div class="profile">
-                    <h3>John Doe</h3>
-                    <p>RJ</p>
+                    <div class="profile">
+                        <p>${avaliacao.usuario.nome}</p>
+                    </div>
+                </div>
+                <p class="review">
+                        ${avaliacao.avaliacao}
+                </p>
+                <div class="ratings">
+                    <c:forEach begin="1" end="5" var="i">
+                        <c:choose>
+                            <c:when test="${i <= avaliacao.avaliacao}">
+                                <i class='bx bxs-star'></i>
+                            </c:when>
+                            <c:otherwise>
+                                <i class='bx bx-star'></i>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
                 </div>
             </div>
-            <p class="review">
-                Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Ipsam repellat natus sed unde dignissimos vero nostrum accusantium accusamus obcaecati corrupti.
-            </p>
-            <div class="ratings">
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-            </div>
-        </div>
-        <div class="card">
-            <div class="head">
-
-                <div class="profile">
-                    <h3>John Doe</h3>
-                    <p>RJ</p>
-                </div>
-            </div>
-            <p class="review">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, fugiat consequatur a recusandae magni! Veritatis esse pariatur quas vero eligendi quis dolores, nesciunt quasi assumenda magni eaque rem dicta non amet quaerat, eum, repudiandae temporibus aut corporis nostrum delectus voluptatibus deserunt ab nam! Ratione porro fugit nesciunt est.
-            </p>
-            <div class="ratings">
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-            </div>
-        </div>
-        <div class="card">
-            <div class="head">
-
-                <div class="profile">
-                    <h3>John Doe</h3>
-                    <p>RJ</p>
-                </div>
-            </div>
-            <p class="review">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ab neque, vel pariatur culpa minus dicta labore adipisci aliquid! Nemo, sequi! Ipsa error, cumque quaerat ut explicabo quisquam voluptates. Deserunt ratione cumque ipsum iusto itaque voluptates, cum, odio maxime repellat sed totam aut amet dolores sunt delectus! Veritatis, provident, iste!
-            </p>
-            <div class="ratings">
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-            </div>
-        </div>
-        <div class="card">
-            <div class="head">
-
-                <div class="profile">
-                    <h3>John Doe</h3>
-                    <p>RJ</p>
-                </div>
-            </div>
-            <p class="review">
-                Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Perspiciatis eligendi magni asperiores ad amet dolores exercitationem eum facilis! Consequuntur consequatur nihil quia corrupti, similique temporibus adipisci et dicta ipsa, odio.
-            </p>
-            <div class="ratings">
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-            </div>
-        </div>
-        <div class="card">
-            <div class="head">
-
-                <div class="profile">
-                    <h3>John Doe</h3>
-                    <p>RJ</p>
-                </div>
-            </div>
-            <p class="review">
-                Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aliquid, in iure reprehenderit voluptatum inventore, praesentium quisquam ipsa deleniti molestiae voluptatem cupiditate repellat necessitatibus quos officiis sit repudiandae aut totam blanditiis quam odio maxime numquam eligendi?
-            </p>
-            <div class="ratings">
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star' ></i>
-                <i class='bx bxs-star-half' ></i>
-            </div>
-        </div>
+        </c:forEach>
     </div>
     <div class="indicator">
-    </div>
 </div>
 <footer>
     <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
@@ -213,17 +145,17 @@
     const allStar = document.querySelectorAll('.rating .star')
     const ratingValue = document.querySelector('.rating input')
 
-    allStar.forEach((item, idx)=> {
+    allStar.forEach((item, idx) => {
         item.addEventListener('click', function () {
             let click = 0
             ratingValue.value = idx + 1
 
-            allStar.forEach(i=> {
+            allStar.forEach(i => {
                 i.classList.replace('bxs-star', 'bx-star')
                 i.classList.remove('active')
             })
-            for(let i=0; i<allStar.length; i++) {
-                if(i <= idx) {
+            for (let i = 0; i < allStar.length; i++) {
+                if (i <= idx) {
                     allStar[i].classList.replace('bx-star', 'bxs-star')
                     allStar[i].classList.add('active')
                 } else {
