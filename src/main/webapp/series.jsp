@@ -14,8 +14,8 @@
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesBean">
-                <li>Filmes</li>
+            <a href="cine?action=SerieBean">
+                <li>Serie</li>
             </a>
 
             <a href="cine?action=SeriesBean">

@@ -1,6 +1,8 @@
 package br.com.cine.model.repository;
 
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import br.com.cine.model.entities.Avaliacoes;
 import br.com.cine.model.interfaces.IAvaliacoesRepository;
@@ -35,4 +37,31 @@ public class AvaliacoesRepository implements IAvaliacoesRepository {
             maneger.merge(avaliacoes);
         });
     }
-}
+    public List<Avaliacoes> buscarTodasAvaliacoes() {
+            List<Avaliacoes> todasAvaliacoes = new ArrayList<>();
+
+            // Aqui, você deve implementar a lógica para buscar todas as avaliações no banco de dados
+            // Utilize JDBC ou o framework de persistência que estiver usando (Hibernate, Spring Data, etc.)
+
+            // Exemplo simplificado (assumindo uma conexão JDBC):
+            try (Connection connection = DriverManager.getConnection("sua_url_de_conexao", "seu_usuario", "sua_senha");
+                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM avaliacoes");
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+
+                while (resultSet.next()) {
+                    Avaliacoes avaliacao = new Avaliacoes();
+                    // Configure os atributos da avaliação conforme a estrutura do seu banco de dados
+                    avaliacao.setId(resultSet.getLong("id"));
+                    avaliacao.setTitulo(resultSet.getString("titulo"));
+                    avaliacao.setConteudo(resultSet.getString("Conteudo"));
+                    todasAvaliacoes.add(avaliacao);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return todasAvaliacoes;
+        }
+    }
+
+

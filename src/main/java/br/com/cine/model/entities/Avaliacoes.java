@@ -100,10 +100,6 @@ public class Avaliacoes {
         return conteudo;
     }
 
-    public void setConteudo(Conteudo conteudo) {
-        this.conteudo = conteudo;
-    }
-
     public Boolean getAtivo() {
         return ativo;
     }
@@ -118,4 +114,6 @@ public class Avaliacoes {
                 + classificacao + ", ativo=" + ativo + ", usuario=" + usuario + ", conteudo=" + conteudo + "]";
     }
 
+    public void setConteudo(String conteudo) {
+    }
 }

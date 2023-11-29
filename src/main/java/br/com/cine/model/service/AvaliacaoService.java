@@ -1,6 +1,7 @@
 package br.com.cine.model.service;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 import br.com.cine.model.entities.Avaliacoes;
 import br.com.cine.model.entities.Conteudo;
@@ -41,5 +42,9 @@ public class AvaliacaoService {
 
     public void excluirAvaliacao(Long id) throws SQLException {
         avaliacoesRepository.removerAvaliacaoPeloID(id);
+    }
+
+    public List<Avaliacoes> buscarTodasAvaliacoes() {
+        return buscarTodasAvaliacoes();
     }
 }

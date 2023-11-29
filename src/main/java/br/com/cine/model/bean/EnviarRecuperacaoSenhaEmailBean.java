@@ -26,8 +26,9 @@ public class EnviarRecuperacaoSenhaEmailBean implements TipoAcao {
 
     private final String host = "sandbox.smtp.mailtrap.io";
     private final String emailFrom = "no-reply@projcine.com.br";
-    private final String username = "ada50cd189bf4d";
-    private final String password = "d659fb7334107d";
+    private final String username = "7275fc7e84cc96";
+    private final String password = "1c0beea9d6bafa";
+
 
     private final Logger logger = Logger.getLogger(EnviarRecuperacaoSenhaEmailBean.class.getName());
 
