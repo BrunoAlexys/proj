@@ -37,5 +37,26 @@
     </div>
 </div>
 <script src="js/recuperar-senha.js"></script>
+
+<script>
+    // Example of using SweetAlert2
+    function showSuccessAlert(message) {
+        Swal.fire({
+            icon: 'Senha alterada com sucesso!',
+            title: message,
+            timer: 3000, //
+            showConfirmButton: true
+        });
+    }
+
+    function showErrorAlert(message) {
+        Swal.fire({
+            icon: 'Falha, verifique e tente novamente!',
+            title: message,
+            timer: 3000,
+            showConfirmButton: false
+        });
+    }
+</script>
 </body>
 </html>

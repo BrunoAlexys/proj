@@ -52,4 +52,8 @@ public class AvaliacaoService {
     public void excluirAvaliacao(Long id) throws SQLException {
         avaliacoesRepository.removerAvaliacaoPeloID(id);
     }
+
+    public List<Avaliacoes> buscarTodasAvaliacoes() {
+        return buscarTodasAvaliacoes();
+    }
 }

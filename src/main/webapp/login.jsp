@@ -56,5 +56,26 @@
     </div>
 </div>
 <script src="js/login.js"></script>
+
+<script>
+
+    function showSuccessAlert(message) {
+        Swal.fire({
+            icon: 'sucesso',
+            title: message,
+            timer: 3000,
+            showConfirmButton: true
+        });
+    }
+
+    function showErrorAlert(message) {
+        Swal.fire({
+            icon: 'Falhou, tente novamente',
+            title: message,
+            timer: 3000,
+            showConfirmButton: false
+        });
+    }
+</script>
 </body>
 </html>
