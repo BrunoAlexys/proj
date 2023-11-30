@@ -69,7 +69,7 @@
         </div>
 
         <label for="urlImg">URL Imagem:</label>
-        <input type="text" id="urlImg" name="urlImg" required>
+        <input type="text" id="urlImg" value="${cont.get().urlImg}" name="urlImg" required>
 
         <label for="urlTrailer">URL Trailer:</label>
         <input type="text" name="urlTrailer" id="urlTrailer" value="${cont.get().urlTrailer}" required>
