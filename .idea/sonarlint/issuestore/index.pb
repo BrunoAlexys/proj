@@ -18,8 +18,6 @@ g
 7src/main/java/br/com/cine/model/bean/LoginFormBean.java,c\9\c931ae25e549e35b70ffacb5154f597cfbb19000
 l
 <src/main/java/br/com/cine/model/bean/RecuperarSenhaBean.java,0\a\0a8a5daf0f3001d6c23a9c73e64047981bf30f6c
-j
-:src/main/java/br/com/cine/model/bean/ResetarSenhaBean.java,d\d\ddb0701e9a2fbd0cc1bfe3282e9ab6dfd7a6eea8
 r
 Bsrc/main/java/br/com/cine/model/interfaces/IUsuarioRepository.java,e\5\e5944fcb7cba11de24b71adeef8215bb80e455bc
 k

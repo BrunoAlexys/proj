@@ -76,9 +76,9 @@
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        <c:forEach items="${series}" var="top">
+        <c:forEach items="${top10}" var="top">
         <div class="swiper-slide">
-            <a href="./selecionado.html">
+            <a href="cine?action=ListarSelecionadoBean&id=${top.id}">
                 <img src="${top.urlImg}" alt="imagem-1">
             </a>
         </div>
@@ -89,15 +89,34 @@
 </div>
 
 
-<h1>Séries</h1>
-<div class="wrapper">
-    <section id="section1">
-        <a href="#section3" class="arrow__btn">‹</a>
-        <div class="item">
-            <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp">
-        </div>
-        <a href="#section3" class="arrow__btn">›</a>
-    </section>
+<h1>Series</h1>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <c:forEach items="${series}" var="serie">
+            <div class="swiper-slide">
+                <a href="cine?action=ListarSelecionadoBean&id=${serie.id}">
+                    <img src="${serie.urlImg}" alt="imagem-1">
+                </a>
+            </div>
+        </c:forEach>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<h1>Filmes</h1>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <c:forEach items="${filmes}" var="filme">
+            <div class="swiper-slide">
+                <a href="cine?action=ListarSelecionadoBean&id=${filme.id}">
+                    <img src="${filme.urlImg}" alt="imagem-1">
+                </a>
+            </div>
+        </c:forEach>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
 
 <footer>

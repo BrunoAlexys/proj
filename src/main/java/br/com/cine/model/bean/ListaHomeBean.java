@@ -25,21 +25,21 @@ public class ListaHomeBean implements TipoAcao {
     public void execute() throws ServletException, IOException {
         var service = new ConteudoService();
 
-        //List<Conteudo> listTop10 = null;
+        List<Conteudo> listTop10 = null;
         List<Conteudo> listFilmes = null;
         List<Conteudo> listSeries = null;
 
         try {
             listFilmes = service.listarFilmes();
-            listSeries = service.listarFilmes();
-            //listTop10 = service.listarTop10();
+            listSeries = service.listarSeries();
+            listTop10 = service.listarTop10();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         this.req.setAttribute("filmes", listFilmes);
         this.req.setAttribute("series", listSeries);
-        //this.req.setAttribute("top10", listTop10);
+        this.req.setAttribute("top10", listTop10);
 
         RequestDispatcher dispatcher = this.req.getRequestDispatcher("/home.jsp");
         dispatcher.forward(this.req, this.resp);

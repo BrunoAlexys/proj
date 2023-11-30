@@ -27,8 +27,6 @@ r
 Bsrc/main/java/br/com/cine/model/interfaces/IUsuarioRepository.java,e\5\e5944fcb7cba11de24b71adeef8215bb80e455bc
 k
 ;src/main/java/br/com/cine/model/service/EncriptarSenha.java,c\8\c88d1b04eea6697104a87056521f43025e926fd9
-j
-:src/main/java/br/com/cine/model/bean/ResetarSenhaBean.java,d\d\ddb0701e9a2fbd0cc1bfe3282e9ab6dfd7a6eea8
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
