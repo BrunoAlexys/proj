@@ -12,12 +12,6 @@
     <title>Title</title>
 </head>
 <body>
-<%
-    // Recuperar o ID da série da URL
-    String serieId = request.getParameter("id");
-    // Convertendo o ID para Long (se necessário)
-    Long id = (serieId != null && !serieId.isEmpty()) ? Long.parseLong(serieId) : null;
-%>
 <header>
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
@@ -51,25 +45,21 @@
 </header>
 
 <div id="banner"></div>
-<div class="titulo"><H1>The BATMAN</H1>
-    <h3>2022 · 2h 56m</h3>
+<div class="titulo"><H1>${selecionado.get().titulo}</H1>
 </div>
 
 <div id="trailer-conteiner">
     <div class="content">
         <video controls class="Trailer">
-            <source src="https://www.youtube.com/watch?v=rsQEor4y2hg" type="video/mp4">
+            <source src="${conteudo.get().urlTrailer}" type="video/mp4">
             Seu navegador não tem suporte para videos
         </video>
         <div id="sinopse">
             <p class="description">
-                <br> Data de lançamento: 3 de março de 2022 (Brasil)
-                <br> Diretor: Matt Reeves
-                <br> Bilheteria: 771 milhões USD
-                <br> Roteiro: Matt Reeves, Peter Craig
-                <br> Em Portugal: The Batman
+                <br> ${conteudo.get().dataDeLancamento}
+                <br> ${conteudo.get().diretor}
+                <br> ${conteudo.get().descricao}
             </p>
-
         </div>
     </div>
 </div>
@@ -88,7 +78,7 @@
         </div>
         <input class="input" type="text" placeholder="Titulo da avaliação" name="titulo">
         <textarea name="opinion" cols="30" rows="5" placeholder="Sua opinião..."></textarea>
-        <input type="hidden" name="serieId" value="<%= id %>">
+        <input type="hidden" name="serieId" value="${conteudo.get().id}">
         <div class="btn-group">
             <button type="submit" class="btn submit">Enviar</button>
             <button class="btn cancel">Cancel</button>

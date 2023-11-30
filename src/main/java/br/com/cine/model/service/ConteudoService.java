@@ -25,6 +25,10 @@ public class ConteudoService {
         return conteudoRepository.listarConteudos();
     }
 
+    public List<Conteudo> listarTop10() throws SQLException {
+        return conteudoRepository.listarTop10();
+    }
+
     public List<Conteudo> listarFilmes() throws SQLException {
         return conteudoRepository.listarFilmes();
     }

@@ -14,11 +14,11 @@
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesLogadoBean">
+            <a href="cine?action=ListarFilmesBean">
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=SeriesLogadoBean">
+            <a href="cine?action=ListarSeriesLogadoBean">
                 <li>Series</li>
             </a>
 

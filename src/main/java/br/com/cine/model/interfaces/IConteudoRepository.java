@@ -10,9 +10,8 @@ public interface IConteudoRepository {
     Optional<Conteudo> buscarPeloID(long id) throws SQLException;
     List<Conteudo> listarConteudos() throws SQLException;
     List<Conteudo> listarFilmes() throws SQLException;
-    List<Conteudo> listarTop10Filmes() throws SQLException;
+    List<Conteudo> listarTop10() throws SQLException;
     List<Conteudo> listarSeries() throws SQLException;
-    List<Conteudo> listarTop10Series() throws SQLException;
     void alterar(Conteudo conteudo) throws SQLException;
     void excluirPeloID(Long id) throws SQLException;
 }

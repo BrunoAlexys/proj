@@ -17,11 +17,11 @@
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesLogadoBean">
+            <a href="cine?action=ListarFilmesBean">
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=SeriesLogadoBean">
+            <a href="cine?action=ListarSeriesLogadoBean">
                 <li>Series</li>
             </a>
 
@@ -36,17 +36,20 @@
         </ul>
     </nav>
 </header>
-<c:forEach items="${series}" var="serie">
+
 <div class="main-containe">
     <div class="main-content" id="main-content">
-        <a href="./selecionado.html"> <div class="cards" style="background-image: url('${serie.urlImg}');">
-            <div class="character-name-bg">
-                <span class="character-name">${serie.titulo}</span>
-            </div>
-        </div></a>
+        <c:forEach items="${series}" var="serie">
+            <a href="./selecionado.html">
+                <div class="cards" style="background-image: url('${serie.urlImg}');">
+                    <div class="character-name-bg">
+                        <span class="character-name">${serie.titulo}</span>
+                    </div>
+                </div>
+            </a>
+        </c:forEach>
     </div>
 </div>
-</c:forEach>
 <footer>
     <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>

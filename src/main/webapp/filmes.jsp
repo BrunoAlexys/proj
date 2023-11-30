@@ -15,15 +15,15 @@
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
         <ul>
-            <a href="cine?action=HomeBean">
+            <a href="cine?action=ListaHomeBean">
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesBean">
+            <a href="cine?action=ListarFilmesBean">
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=SeriesBean">
+            <a href="cine?action=ListarSeriesBean">
                 <li>Series</li>
             </a>
 
@@ -36,8 +36,8 @@
 
 <div class="main-containe">
     <div class="main-content" id="main-content">
-        <c:forEach var="filme" items="${filmes}">
-        <a href="./selecionado.html">
+        <c:forEach items="${filmes}" var="filme">
+        <a href="cine?action=ListarSelecionadoBean&id=${filme.id}">
             <div class="cards"
                  style="background-image: url('${filme.urlImg}');">
                 <div class="character-name-bg">

@@ -38,7 +38,7 @@ public class ConteudoRepository implements IConteudoRepository {
     }
 
     @Override
-    public List<Conteudo> listarTop10Filmes() throws SQLException {
+    public List<Conteudo> listarTop10() throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(maneger -> {
             return maneger.createQuery("SELECT DISTINCT c FROM Conteudo c " +
                     "JOIN c.listAvaliacoes a " +
@@ -51,18 +51,7 @@ public class ConteudoRepository implements IConteudoRepository {
     @Override
     public List<Conteudo> listarSeries() throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(manager -> {
-            return manager.createQuery("select c from Conteudo c where c.ativo = true", Conteudo.class).getResultList();
-        });
-    }
-
-    @Override
-    public List<Conteudo> listarTop10Series() throws SQLException {
-        return TransacaoUtil.executarTransacaoComRetorno(maneger -> {
-            return maneger.createQuery("SELECT DISTINCT c FROM Conteudo c " +
-                    "JOIN c.listAvaliacoes a " +
-                    "GROUP BY c " +
-                    "ORDER BY AVG(a.classificacao) DESC " +
-                    "LIMIT 10", Conteudo.class).getResultList();
+            return manager.createQuery("select c from Conteudo c where c.ativo = true and c.tipoConteudo = 'Series' ", Conteudo.class).getResultList();
         });
     }
 

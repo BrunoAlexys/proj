@@ -1,8 +1,6 @@
 
 U
 %src/main/webapp/js/recuperar-senha.js,9\3\933058e60366cc17f8f9e5974a51d29e8dd65045
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 Y
 )src/main/webapp/recuperar-senha-email.jsp,d\4\d4bb371f8a50ef41d9ecda7ba820029e0ff00e0b
 ]
@@ -13,8 +11,6 @@ j
 :src/main/java/br/com/cine/model/bean/FormCadastroBean.java,b\9\b92641899341a885d643f8d30c759a100fd9fe36
 L
 src/main/webapp/css/home.css,f\c\fc387d32009214d2c86c1b60a998aff5cd9d07de
-W
-'src/main/webapp/css/carrossel-serie.css,1\1\117dbaf8d87e6092aa2c8e2ca78b874691544684
 Q
 !src/main/webapp/css/carrossel.css,8\2\82495965dde75f165ef714a5f3500c13ad93d8b5
 l

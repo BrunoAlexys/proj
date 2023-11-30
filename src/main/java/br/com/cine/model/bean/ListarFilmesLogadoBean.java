@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class ListarFilmesBean implements TipoAcao {
+public class ListarFilmesLogadoBean implements TipoAcao {
     private HttpServletRequest req;
     private HttpServletResponse resp;
 
-    public ListarFilmesBean(HttpServletRequest req, HttpServletResponse resp) {
+    public ListarFilmesLogadoBean(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
@@ -34,7 +34,7 @@ public class ListarFilmesBean implements TipoAcao {
 
         this.req.setAttribute("filmes", listFilmes);
 
-        RequestDispatcher dispatcher = this.req.getRequestDispatcher("/filmes.jsp");
+        RequestDispatcher dispatcher = this.req.getRequestDispatcher("/filmes-logado.jsp");
         dispatcher.forward(this.req, this.resp);
     }
 }

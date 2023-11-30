@@ -8,17 +8,24 @@
 <head>
     <link rel="stylesheet" href="css/series.css">
     <title>Series</title>
+    <style>
+        .main-containe {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+            justify-content: space-around; /* Distribui o espaço ao redor dos itens */
+        }
+    </style>
 </head>
 <body>
 <header>
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
         <ul>
-            <a href="cine?action=HomeBean">
+            <a href="cine?action=ListaHomeBean">
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=FilmesBean">
+            <a href="cine?action=ListarFilmesBean">
                 <li>Filmes</li>
             </a>
 
@@ -32,10 +39,11 @@
         </ul>
     </nav>
 </header>
-<c:forEach items="${series}" var="serie">
-    <c:out value="${serie}" />
+
+
 <div class="main-containe">
     <div class="main-content" id="main-content">
+        <c:forEach items="${series}" var="serie">
         <a style="cursor: pointer" href="cine?action=SelecionadoBean&id=${serie.id}">
             <div class="cards"
                  style="background-image: url('${serie.urlImg}')">
@@ -44,9 +52,9 @@
                 </div>
             </div>
         </a>
+        </c:forEach>
     </div>
 </div>
-</c:forEach>
 <footer>
     <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>

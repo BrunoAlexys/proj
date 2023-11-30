@@ -26,12 +26,8 @@ r
 Bsrc/main/java/br/com/cine/model/interfaces/IUsuarioRepository.java,e\5\e5944fcb7cba11de24b71adeef8215bb80e455bc
 k
 ;src/main/java/br/com/cine/model/service/EncriptarSenha.java,c\8\c88d1b04eea6697104a87056521f43025e926fd9
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 M
 src/main/webapp/css/admin.css,0\e\0e5748376a4a18efd1d6342bfaad8a9b599e3399
-W
-'src/main/webapp/css/carrossel-serie.css,1\1\117dbaf8d87e6092aa2c8e2ca78b874691544684
 Q
 !src/main/webapp/css/carrossel.css,8\2\82495965dde75f165ef714a5f3500c13ad93d8b5
 S
