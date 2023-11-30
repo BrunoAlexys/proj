@@ -9,12 +9,6 @@ body {
     padding: 0;
 }
 
-.cadastro{
-    font-family: 'kdam Thmor Pro' , sans-serif ;
-    color: #fff;
-    text-align: center;
-
-}
 
 header{
     height: 90px;
@@ -46,7 +40,7 @@ li:hover {
     color: #d21617;
 }
 
-.editarh{
+.cadastrarh{
     color: #fff;
     font-family: 'kdam Thmor Pro' , sans-serif;
     text-align: center;
@@ -139,6 +133,7 @@ li:hover {
 }
 
 
+
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -185,11 +180,9 @@ textarea {
 }
 
 .buttons {
-    display: block;
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-
-
 }
 
 button {
@@ -203,7 +196,6 @@ button {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
-
 }
 
 button:active {

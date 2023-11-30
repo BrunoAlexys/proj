@@ -12,8 +12,6 @@ U
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
 b
 2src/main/java/br/com/cine/controller/TipoAcao.java,6\e\6e7ddd3ab340719e89030b74421488293a8f603c
-m
-=src/main/java/br/com/cine/model/bean/CadastroUsuarioBean.java,6\6\66a06e86ec75ae486e54c70fe08d0e88e0e1fe18
 j
 :src/main/java/br/com/cine/model/bean/FormCadastroBean.java,b\9\b92641899341a885d643f8d30c759a100fd9fe36
 g

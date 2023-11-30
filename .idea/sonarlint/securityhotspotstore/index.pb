@@ -46,8 +46,6 @@ g
 7src/main/java/br/com/cine/model/bean/LoginFormBean.java,c\9\c931ae25e549e35b70ffacb5154f597cfbb19000
 8
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
-m
-=src/main/java/br/com/cine/model/bean/CadastroUsuarioBean.java,6\6\66a06e86ec75ae486e54c70fe08d0e88e0e1fe18
 M
 src/main/webapp/css/admin.css,0\e\0e5748376a4a18efd1d6342bfaad8a9b599e3399
 P

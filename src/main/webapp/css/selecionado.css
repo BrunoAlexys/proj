@@ -80,7 +80,6 @@ li:hover {
 }
 
 #banner {
-    background: url('https://pbs.twimg.com/media/FBwJWeQXIAItfyH.jpg:large') ;
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
@@ -262,6 +261,8 @@ span{
     background-color: transparent;
     border-color: #FFFFFF;
 }
+
+
 
 
 

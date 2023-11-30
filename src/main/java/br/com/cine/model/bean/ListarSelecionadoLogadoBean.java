@@ -15,11 +15,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-public class ListarSelecionadoBean implements TipoAcao {
+public class ListarSelecionadoLogadoBean implements TipoAcao {
     private HttpServletRequest req;
     private HttpServletResponse resp;
 
-    public ListarSelecionadoBean(HttpServletRequest req, HttpServletResponse resp) {
+    public ListarSelecionadoLogadoBean(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
@@ -41,7 +41,7 @@ public class ListarSelecionadoBean implements TipoAcao {
             if (conteudo.isPresent()) {
                 this.req.setAttribute("conteudo", conteudo);
                 this.req.setAttribute("listConteudo", listConteudo);
-                RequestDispatcher dispatcher = this.req.getRequestDispatcher("/selecionado.jsp");
+                RequestDispatcher dispatcher = this.req.getRequestDispatcher("/selecionado-logado.jsp");
                 dispatcher.forward(this.req, this.resp);
             }
         } catch (SQLException e) {

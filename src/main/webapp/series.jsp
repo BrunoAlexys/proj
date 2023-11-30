@@ -44,7 +44,7 @@
 <div class="main-containe">
     <div class="main-content" id="main-content">
         <c:forEach items="${series}" var="serie">
-        <a style="cursor: pointer" href="cine?action=SelecionadoBean&id=${serie.id}">
+        <a style="cursor: pointer" href="cine?action=ListarSelecionadoBean&id=${serie.id}">
             <div class="cards"
                  style="background-image: url('${serie.urlImg}')">
                 <div class="character-name-bg">

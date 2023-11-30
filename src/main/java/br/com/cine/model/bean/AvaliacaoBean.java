@@ -26,22 +26,22 @@ public class AvaliacaoBean implements TipoAcao {
     @Override
     public void execute() throws ServletException, IOException {
         try {
-            String titulo = req.getParameter("titulo");
-            String avaliacao = req.getParameter("opinion");
-            Integer classificacao = Integer.parseInt(req.getParameter("rating"));
-            Long serieId = Long.parseLong(req.getParameter("serieId"));
+            String titulo = this.req.getParameter("titulo");
+            String avaliacao = this.req.getParameter("opinion");
+            String classificacao = this.req.getParameter("rating");
+            String conteudoIDParam = this.req.getParameter("conteudoID");
 
-            Usuario usuarioLogado = UsuarioUtil.obterUsuarioLogado(this.req);
-            this.req.setAttribute("usuarioLogado", usuarioLogado);
+            Integer classificacaoInt = Integer.parseInt(classificacao);
+            Long conteudoId = Long.parseLong(conteudoIDParam);
+
+            //Usuario usuarioLogado = UsuarioUtil.obterUsuarioLogado(this.req);
+            //this.req.setAttribute("usuarioLogado", usuarioLogado);
 
 
-            avaliacaoService.cadastrarAvaliacao(titulo, avaliacao, classificacao, usuarioLogado.getId(), serieId);
+            avaliacaoService.cadastrarAvaliacao(titulo, avaliacao, classificacaoInt, null, conteudoId);
 
-            //resp.sendRedirect(req.getContextPath() + "/avaliacao.jsp");
         } catch (SQLException e) {
-
             e.printStackTrace();
-            //resp.sendRedirect(req.getContextPath() + "/erro.jsp");
         }
     }
 }

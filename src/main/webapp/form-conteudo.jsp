@@ -1,32 +1,36 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/form-conteudo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     <title>Cadastro de Conteudo</title>
 </head>
 <body>
 <header>
-    <img id="logo" src="WhatsApp Image 2023-10-28 at 16.29.28.jpeg"/>
+    <img id="logo" src="WhatsApp Image 2023-10-28 at 16.29.28.jpeg" />
     <nav>
         <ul>
-            <a href="">
-                <li></li>
-            </a>
 
-            <a href="">
-                <li></li>
-            </a>
+            <h1 class="cadastrarh">Cadastrar</h1>
 
-            <a href="">
-                <li></li>
-            </a>
 
-            <a href="./login.html">
-                <li>Login</li>
-            </a>
+            </div>
         </ul>
     </nav>
+
+    <button id="optionsButton"><i class="fas fa-user"></i></button>
+    <div id="options-container">
+        <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
+        <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+        <script src="js/menu.js"></script>
+    </div>
 </header>
+
+<div class="arrow" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i>
+</div>
+
 <div class="container">
     <form id="cadastroForm" action="cine?action=CadastroConteudoBean" method="post">
         <label for="tipoConteudo">Tipo do Conteúdo:</label>

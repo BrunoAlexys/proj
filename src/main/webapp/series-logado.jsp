@@ -17,7 +17,7 @@
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=ListarFilmesBean">
+            <a href="cine?action=ListarFilmesLogadoBean">
                 <li>Filmes</li>
             </a>
 
@@ -27,7 +27,7 @@
 
             <button id="optionsButton"><i class="fas fa-user"></i></button>
             <div id="options-container">
-                <div class="option" onclick="Alterar()">Alterar</div>
+                <div class="option" onclick="window.location.href='cine?action=FormAlterarUsuarioBean'" onclick="Alterar()">Alterar</div>
                 <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
 
                 <script src="js/home-logado.js"></script>
@@ -40,7 +40,7 @@
 <div class="main-containe">
     <div class="main-content" id="main-content">
         <c:forEach items="${series}" var="serie">
-            <a href="./selecionado.html">
+            <a href="cine?action=ListarSelecionadoLogadoBean&id=${serie.id}">
                 <div class="cards" style="background-image: url('${serie.urlImg}');">
                     <div class="character-name-bg">
                         <span class="character-name">${serie.titulo}</span>

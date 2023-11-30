@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,32 +17,32 @@
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
         <ul>
-            <a href="cine?action=ListaHomeBean">
+            <a href="cine?action=HomeLogadoBean">
                 <li>Home</li>
             </a>
 
-            <a href="cine?action=ListarFilmesBean">
+            <a href="cine?action=ListarFilmesLogadoBean">
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=ListarSeriesBean">
+            <a href="cine?action=ListarSeriesLogadoBean">
                 <li>Series</li>
             </a>
 
-            <a href="cine?action=LoginFormBean">
-                <li>Login</li>
-            </a>
+            <button id="optionsButton"><i class="fas fa-user"></i></button>
+            <div id="options-container">
+                <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
+                <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
+            </div>
         </ul>
     </nav>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </header>
-
 <div id="banner" style="background-image: url('${conteudo.get().urlImg}');"></div>
 <div class="titulo"><H1>${conteudo.get().titulo}</H1>
 </div>
-
 <div id="trailer-conteiner">
     <div class="content">
         <video controls class="Trailer">
@@ -58,6 +59,36 @@
             </p>
         </div>
     </div>
+</div>
+
+
+<div class="wrapper">
+    <h3>Avaliações</h3>
+    <form action="cine?action=AvaliacaoBean" method="post">
+        <div class="rating" style="">
+            <input type="radio" name="rating" value="0" id="star0">
+            <label for="star0" class='bx bx-star star' style="--i: 0;"></label>
+
+            <input type="radio" name="rating" value="1" id="star1">
+            <label for="star1" class='bx bx-star star' style="--i: 1;"></label>
+
+            <input type="radio" name="rating" value="2" id="star2">
+            <label for="star2" class='bx bx-star star' style="--i: 2;"></label>
+
+            <input type="radio" name="rating" value="3" id="star3">
+            <label for="star3" class='bx bx-star star' style="--i: 3;"></label>
+
+            <input type="radio" name="rating" value="4" id="star4">
+            <label for="star4" class='bx bx-star star' style="--i: 4;"></label>
+        </div>
+        <input class="input" type="text" placeholder="Titulo da avaliação" name="titulo">
+        <textarea name="opinion" cols="30" rows="5" placeholder="Sua opinião..."></textarea>
+        <input type="hidden" name="conteudoID" value="${conteudo.get().id}">
+        <div class="btn-group">
+            <button type="submit" class="btn submit">Enviar</button>
+            <button class="btn cancel">Cancel</button>
+        </div>
+    </form>
 </div>
 <div class="container">
     <div class="card-wrapper">

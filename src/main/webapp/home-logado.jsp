@@ -54,7 +54,7 @@
         <li>Home</li>
       </a>
 
-      <a href="cine?action=ListarFilmesBean">
+      <a href="cine?action=ListarFilmesLogadoBean">
         <li>Filmes</li>
       </a>
 
@@ -64,7 +64,7 @@
 
       <button id="optionsButton"><i class="fas fa-user"></i></button>
       <div id="options-container">
-        <div class="option" onclick="Alterar()">Alterar</div>
+        <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
         <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
       </div>
     </ul>
