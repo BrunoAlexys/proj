@@ -20,7 +20,7 @@
 
     <button id="optionsButton"><i class="fas fa-user"></i></button>
     <div id="options-container">
-        <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
+        <div class="option" onclick="window.location.href='cine?action=ListarAdmPorIDBean'" onclick="Alterar()">Alterar</div>
         <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
         <script src="js/menu.js"></script>

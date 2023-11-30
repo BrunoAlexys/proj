@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class LoginBean implements TipoAcao {
-    private static final String ADMIN_EMAIL = "admin@gmail.com";
+    private static final String ADMIN_EMAIL = "administrador@gmail.com";
 
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
