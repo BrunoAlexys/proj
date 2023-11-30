@@ -37,8 +37,8 @@
 <div class="main-containe">
     <div class="main-content" id="main-content">
         <a style="cursor: pointer" href="cine?action=SelecionadoBean&id=${serie.id}">
-            <div class="cards">
-                 style="background-image: url('${serie.urlImg}')"
+            <div class="cards"
+                 style="background-image: url('${serie.urlImg}')">
                 <div class="character-name-bg">
                     <span class="character-name">${serie.titulo}</span>
                 </div>
