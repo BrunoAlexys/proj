@@ -28,7 +28,7 @@
     </nav>
 </header>
 <div class="container">
-    <form id="cadastroForm" action="cine?action=CadastroConteudoBean" method="post" enctype="multipart/form-data">
+    <form id="cadastroForm" action="cine?action=CadastroConteudoBean" method="post">
         <label for="tipoConteudo">Tipo do Conteúdo:</label>
         <select name="tipoConteudo" id="tipoConteudo" onchange="exibirCamposEspecificos()">
             <option value="Filmes">Filmes</option>

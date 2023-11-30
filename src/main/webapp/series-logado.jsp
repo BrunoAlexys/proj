@@ -40,63 +40,7 @@
                 <span class="character-name"> The batman </span>
             </div>
         </div></a>
-
-        <div class="cards" style="background-image: url('https://media.fstatic.com/lcM9v4L1Re1uVx91qpzrKgxpSYI=/210x312/smart/filters:format(webp)/media/movies/covers/2023/07/cats_8Ki1W3h.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/3.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/4.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"> </span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/5.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/6.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/7.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/8.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/9.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
-        <div class="cards" style="background-image: url('https://starwars-visualguide.com/assets/img/characters/10.jpg');">
-            <div class="character-name-bg">
-                <span class="character-name"></span>
-            </div>
-        </div>
-
     </div>
-
 </div>
 
 <footer>

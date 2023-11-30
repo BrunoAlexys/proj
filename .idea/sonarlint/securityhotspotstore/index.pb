@@ -21,8 +21,6 @@ l
 <src/main/java/br/com/cine/model/bean/RecuperarSenhaBean.java,0\a\0a8a5daf0f3001d6c23a9c73e64047981bf30f6c
 b
 2src/main/java/br/com/cine/controller/TipoAcao.java,6\e\6e7ddd3ab340719e89030b74421488293a8f603c
-N
-src/main/webapp/css/series.css,3\1\312c7b6d588acdcb56949ccff6d0db6c7053cde2
 P
  src/main/webapp/css/resposta.css,e\c\ecaf5de8eefed7125c775fdbfa85d816d0f232c5
 Q

@@ -44,8 +44,6 @@ M
 -src/main/webapp/css/recuperar-senha-email.css,e\b\eb50aa56441e672ce4ec2ff8319608e760d9b720
 P
  src/main/webapp/css/resposta.css,e\c\ecaf5de8eefed7125c775fdbfa85d816d0f232c5
-N
-src/main/webapp/css/series.css,3\1\312c7b6d588acdcb56949ccff6d0db6c7053cde2
 K
 src/main/webapp/js/login.js,1\9\19241706d266f801bf2aad2bf0f1805a05206a32
 [
