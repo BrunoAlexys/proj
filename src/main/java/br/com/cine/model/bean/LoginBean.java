@@ -35,12 +35,12 @@ public class LoginBean implements TipoAcao {
                 if (isAdmin(usuarioEncontrado.get())) {
                     adicionarUsuarioNaSessao(usuarioEncontrado.get());
                     resp.sendRedirect("cine?action=ListarConteudoBean");
-                } else {
+                } else if (notAdmin(usuarioEncontrado.get())) {
                     adicionarUsuarioNaSessao(usuarioEncontrado.get());
-                    resp.sendRedirect("cine?action=HomeBean");
+                    resp.sendRedirect("cine?action=HomeLogadoBean");
                 }
             } else {
-                resp.sendRedirect("cine?action=HomeBean");
+                resp.sendRedirect("cine?action=LoginFormBean");
             }
 
         } catch (Exception e) {
@@ -50,6 +50,10 @@ public class LoginBean implements TipoAcao {
 
     private boolean isAdmin(Usuario usuario) {
         return usuario.getEmail().equals(ADMIN_EMAIL);
+    }
+
+    private boolean notAdmin(Usuario usuario) {
+        return !isAdmin(usuario);
     }
 
     private void adicionarUsuarioNaSessao(Usuario usuario) throws IOException {

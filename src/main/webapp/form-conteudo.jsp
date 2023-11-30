@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +6,7 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="WhatsApp Image 2023-10-28 at 16.29.28.jpeg" />
+    <img id="logo" src="WhatsApp Image 2023-10-28 at 16.29.28.jpeg"/>
     <nav>
         <ul>
             <a href="">
@@ -29,7 +28,7 @@
     </nav>
 </header>
 <div class="container">
-    <form id="cadastroForm" action="cine?action=CadastroConteudoBean" method="post">
+    <form id="cadastroForm" action="cine?action=CadastroConteudoBean" method="post" enctype="multipart/form-data">
         <label for="tipoConteudo">Tipo do Conteúdo:</label>
         <select name="tipoConteudo" id="tipoConteudo" onchange="exibirCamposEspecificos()">
             <option value="Filmes">Filmes</option>
@@ -62,7 +61,7 @@
         </div>
 
         <label for="urlImg">URL Imagem:</label>
-        <input type="text" name="urlImg" id="urlImg" required>
+        <input type="text" id="urlImg" name="urlImg" required>
 
         <label for="urlTrailer">URL Trailer:</label>
         <input type="text" name="urlTrailer" id="urlTrailer" required>
@@ -89,6 +88,18 @@
     function salvarFormulario() {
         salvarCadastro();
     }
+
+    function updateFileName() {
+        const input = document.getElementById('imagem');
+        const fileNameText = document.getElementById('file-name-text');
+
+        if (input.files.length > 0) {
+            fileNameText.textContent = input.files[0].name;
+        } else {
+            fileNameText.textContent = 'Escolha uma imagem';
+        }
+    }
+</script>
 </script>
 </body>
 </html>

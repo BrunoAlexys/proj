@@ -21,7 +21,7 @@ public class Avaliacoes {
     private Long id;
 
     @Column(name = "titulo")
-    @NotBlank(message = "O campo titulo não pode ser vazio")
+    //@NotBlank(message = "O campo titulo não pode ser vazio")
     private String titulo;
 
     @Column(name = "avaliacoes")
@@ -100,6 +100,9 @@ public class Avaliacoes {
         return conteudo;
     }
 
+    public void setConteudo(Conteudo conteudo) {
+        this.conteudo = conteudo;
+    }
     public Boolean getAtivo() {
         return ativo;
     }
@@ -108,12 +111,4 @@ public class Avaliacoes {
         this.ativo = ativo;
     }
 
-    @Override
-    public String toString() {
-        return "Avaliacoes [id=" + id + ", titulo=" + titulo + ", avaliacao=" + avaliacao + ", classificacao="
-                + classificacao + ", ativo=" + ativo + ", usuario=" + usuario + ", conteudo=" + conteudo + "]";
-    }
-
-    public void setConteudo(String conteudo) {
-    }
 }

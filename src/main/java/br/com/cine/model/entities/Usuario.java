@@ -144,9 +144,19 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", senha="
-                + senha + ", dataDeNascimento=" + dataDeNascimento + ", genero=" + genero + ", ativo=" + ativo
-                + ", listAvaliacoes=" + listAvaliacoes + "]";
+        StringBuilder builder = new StringBuilder();
+        builder.append("Usuario [id=").append(id)
+                .append(", nome=").append(nome)
+                .append(", sobrenome=").append(sobrenome)
+                .append(", email=").append(email)
+                .append(", senha=").append(senha)
+                .append(", dataDeNascimento=").append(dataDeNascimento)
+                .append(", genero=").append(genero)
+                .append(", ativo=").append(ativo)
+                .append(", codigoRecuperacao=").append(codigoRecuperacao);
+
+        return builder.toString();
     }
+
 
 }

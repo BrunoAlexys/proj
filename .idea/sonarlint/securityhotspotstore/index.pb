@@ -1,12 +1,8 @@
 
 U
 %src/main/webapp/js/recuperar-senha.js,9\3\933058e60366cc17f8f9e5974a51d29e8dd65045
-S
-#src/main/webapp/recuperar-senha.jsp,c\7\c7898e516ba5aa0a9393dbcaff483dfe614b4781
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-W
-'src/main/webapp/css/recuperar-senha.css,5\0\5038afa51ab3dc662c22eab598bb8d82351679c9
 Y
 )src/main/webapp/recuperar-senha-email.jsp,d\4\d4bb371f8a50ef41d9ecda7ba820029e0ff00e0b
 ]
@@ -27,18 +23,10 @@ l
 <src/main/java/br/com/cine/model/bean/RecuperarSenhaBean.java,0\a\0a8a5daf0f3001d6c23a9c73e64047981bf30f6c
 b
 2src/main/java/br/com/cine/controller/TipoAcao.java,6\e\6e7ddd3ab340719e89030b74421488293a8f603c
-d
-4src/main/java/br/com/cine/model/bean/SeriesBean.java,c\c\cc924854d8975c849889c26b3596216c0eb480fe
 N
 src/main/webapp/css/series.css,3\1\312c7b6d588acdcb56949ccff6d0db6c7053cde2
-N
-src/main/webapp/css/filmes.css,a\5\a557e01a01409c31296b589de94cff994262c03e
 P
  src/main/webapp/css/resposta.css,e\c\ecaf5de8eefed7125c775fdbfa85d816d0f232c5
-[
-+src/main/java/br/com/cine/util/JPAUtil.java,2\8\2845fa0e6ea854c2af982a0313269505bb55166a
-S
-#src/main/webapp/css/selecionado.css,6\3\63cd8bcb0ecf0d90458bc5ca53da68b7226fe221
 Q
 !src/main/webapp/js/selecionado.js,9\b\9b5c65e3151cc5f822e566306ba6a339ea6de3c7
 S
@@ -54,8 +42,6 @@ Isrc/main/java/br/com/cine/model/bean/EnviarRecuperacaoSenhaEmailBean.java,4\f\
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 4
 mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
 U
@@ -70,21 +56,11 @@ g
 7src/main/java/br/com/cine/model/bean/LoginFormBean.java,c\9\c931ae25e549e35b70ffacb5154f597cfbb19000
 8
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
-a
-1src/main/java/br/com/cine/util/TransacaoUtil.java,6\0\60d33f17f27eca102f9efc358cd00eeac3fa72f5
-b
-2src/main/java/br/com/cine/model/bean/HomeBean.java,5\6\56e33d5c2a00c963c21a46fafd0ad31922f2bc39
 m
 =src/main/java/br/com/cine/model/bean/CadastroUsuarioBean.java,6\6\66a06e86ec75ae486e54c70fe08d0e88e0e1fe18
-q
-Asrc/main/java/br/com/cine/model/repository/UsuarioRepository.java,6\6\66d2124a79414ee0bb9f9e74d8cd232ff40709fa
 I
 src/main/webapp/login.jsp,8\5\85ee523d01e5e19376db640e846c91bbcb0a1c22
-H
-src/main/webapp/home.jsp,6\8\6853166b9553bb500860233db274f93560c021c5
 M
 src/main/webapp/css/admin.css,0\e\0e5748376a4a18efd1d6342bfaad8a9b599e3399
-K
-src/main/webapp/js/admin.js,b\1\b136be9c2578205eb281987d927b5341429b31e7
 P
  src/main/webapp/css/conteudo.css,9\6\96fc60282c22163436972c36f34b286c7a26025b

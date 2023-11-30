@@ -27,8 +27,6 @@ public class ListarConteudoPorIDBean implements TipoAcao {
         String idParam = this.req.getParameter("id");
         Long id = Long.parseLong(idParam);
 
-        System.out.println("ID: " + id);
-
         var service = new ConteudoService();
 
         Optional<Conteudo> conteudoID = null;

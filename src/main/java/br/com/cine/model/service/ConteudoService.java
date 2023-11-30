@@ -29,8 +29,8 @@ public class ConteudoService {
         return conteudoRepository.listarFilmes();
     }
 
-    public void listarSeries()throws SQLException {
-        conteudoRepository.listarSeries();
+    public List<Conteudo> listarSeries()throws SQLException {
+        return conteudoRepository.listarSeries();
     }
 
     public void alterar(Conteudo conteudo) throws SQLException {

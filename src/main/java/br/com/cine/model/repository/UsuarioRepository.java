@@ -20,7 +20,7 @@ public class UsuarioRepository implements IUsuarioRepository {
         return TransacaoUtil.executarTransacaoComRetorno(manager -> {
             try {
                 Usuario usuario = manager
-                        .createQuery("from Usuario u where u.email = :email and u.ativo = true", Usuario.class)
+                        .createQuery("select u from Usuario u where u.email = :email and u.ativo = true", Usuario.class)
                         .setParameter("email", email).getSingleResult();
 
                 if (BCrypt.checkpw(senha, usuario.getSenha())) {

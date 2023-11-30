@@ -18,18 +18,16 @@ public class AvaliacaoService {
     public void cadastrarAvaliacao(String titulo, String avaliacao, Integer classificacao, Long usuarioID,
                                    Long conteudoID) throws SQLException {
         Optional<Usuario> usuarioEncontrado = usuarioService.buscarUsuarioPorID(usuarioID);
-        Optional<Conteudo> conteudoEncontrado = conteudoService.buscarPeloID(conteudoID);
+        //Optional<Conteudo> conteudoEncontrado = conteudoService.buscarPeloID(conteudoID);
 
-        if (usuarioEncontrado.isPresent() && conteudoEncontrado.isPresent()) {
-            Usuario usuario = usuarioEncontrado.get();
-            Conteudo conteudo = conteudoEncontrado.get();
+        if (usuarioEncontrado.isPresent()) {
 
             Avaliacoes avaliacoes = new Avaliacoes();
             avaliacoes.setTitulo(titulo);
             avaliacoes.setAvaliacao(avaliacao);
             avaliacoes.setClassificacao(classificacao);
             avaliacoes.setUsuario(usuarioEncontrado.get());
-            avaliacoes.setConteudo(conteudoEncontrado.get());
+            //avaliacoes.setConteudo(conteudoEncontrado.get());
 
             avaliacoesRepository.salvarAvaliacao(avaliacoes);
         } else {

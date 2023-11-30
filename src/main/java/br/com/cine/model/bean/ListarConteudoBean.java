@@ -27,6 +27,7 @@ public class ListarConteudoBean implements TipoAcao {
         var service = new ConteudoService();
 
         List<Conteudo> listConteudo = null;
+
         try {
             listConteudo = service.listarConteudo();
         } catch (SQLException e) {

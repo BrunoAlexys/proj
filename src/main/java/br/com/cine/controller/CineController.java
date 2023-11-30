@@ -23,7 +23,7 @@ public class CineController extends HttpServlet {
         boolean isProtected = !(action.equalsIgnoreCase("LoginBean") || action.equalsIgnoreCase("LoginFormBean")
                 || action.equalsIgnoreCase("HomeBean") || action.equalsIgnoreCase("CadastroUsuarioBean")
                 || action.equalsIgnoreCase("FilmesBean") || action.equalsIgnoreCase("SeriesBean")
-                || action.equalsIgnoreCase("ListarFilmesBean") || action.equalsIgnoreCase("ListarAvaliacaoBean")
+                || action.equalsIgnoreCase("ListarSeriesBean") || action.equalsIgnoreCase("ListarAvaliacaoBean")
                 || action.equalsIgnoreCase("SelecionadoBean"));
 
         if (isLogado && isProtected) {

@@ -10,8 +10,6 @@ U
 mvnw,5\d\5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
 8
 mvnw.cmd,1\f\1f1763f358c257ea3515417352b82b0165647ad1
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 b
 2src/main/java/br/com/cine/controller/TipoAcao.java,6\e\6e7ddd3ab340719e89030b74421488293a8f603c
 m
@@ -20,8 +18,6 @@ y
 Isrc/main/java/br/com/cine/model/bean/EnviarRecuperacaoSenhaEmailBean.java,4\f\4fd6c8c276f54646ec3f2ac7a1f6dd25710bc1df
 j
 :src/main/java/br/com/cine/model/bean/FormCadastroBean.java,b\9\b92641899341a885d643f8d30c759a100fd9fe36
-b
-2src/main/java/br/com/cine/model/bean/HomeBean.java,5\6\56e33d5c2a00c963c21a46fafd0ad31922f2bc39
 g
 7src/main/java/br/com/cine/model/bean/LoginFormBean.java,c\9\c931ae25e549e35b70ffacb5154f597cfbb19000
 l
@@ -30,18 +26,10 @@ q
 Asrc/main/java/br/com/cine/model/bean/RecuperarSenhaEmailBean.java,a\2\a20acb809da2fbb8d86b8aff4ba7276a9bdc12e9
 j
 :src/main/java/br/com/cine/model/bean/ResetarSenhaBean.java,d\d\ddb0701e9a2fbd0cc1bfe3282e9ab6dfd7a6eea8
-d
-4src/main/java/br/com/cine/model/bean/SeriesBean.java,c\c\cc924854d8975c849889c26b3596216c0eb480fe
 r
 Bsrc/main/java/br/com/cine/model/interfaces/IUsuarioRepository.java,e\5\e5944fcb7cba11de24b71adeef8215bb80e455bc
-q
-Asrc/main/java/br/com/cine/model/repository/UsuarioRepository.java,6\6\66d2124a79414ee0bb9f9e74d8cd232ff40709fa
 k
 ;src/main/java/br/com/cine/model/service/EncriptarSenha.java,c\8\c88d1b04eea6697104a87056521f43025e926fd9
-[
-+src/main/java/br/com/cine/util/JPAUtil.java,2\8\2845fa0e6ea854c2af982a0313269505bb55166a
-a
-1src/main/java/br/com/cine/util/TransacaoUtil.java,6\0\60d33f17f27eca102f9efc358cd00eeac3fa72f5
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 M
@@ -52,24 +40,16 @@ Q
 !src/main/webapp/css/carrossel.css,8\2\82495965dde75f165ef714a5f3500c13ad93d8b5
 S
 #src/main/webapp/css/comentarios.css,7\9\799d332afa05303d6c258bbc610bbfb3a5fb34f2
-N
-src/main/webapp/css/filmes.css,a\5\a557e01a01409c31296b589de94cff994262c03e
 L
 src/main/webapp/css/home.css,f\c\fc387d32009214d2c86c1b60a998aff5cd9d07de
 M
 src/main/webapp/css/login.css,c\9\c953adb63298078442a1704870875d6d03cf7c6f
 ]
 -src/main/webapp/css/recuperar-senha-email.css,e\b\eb50aa56441e672ce4ec2ff8319608e760d9b720
-W
-'src/main/webapp/css/recuperar-senha.css,5\0\5038afa51ab3dc662c22eab598bb8d82351679c9
 P
  src/main/webapp/css/resposta.css,e\c\ecaf5de8eefed7125c775fdbfa85d816d0f232c5
-S
-#src/main/webapp/css/selecionado.css,6\3\63cd8bcb0ecf0d90458bc5ca53da68b7226fe221
 N
 src/main/webapp/css/series.css,3\1\312c7b6d588acdcb56949ccff6d0db6c7053cde2
-H
-src/main/webapp/home.jsp,6\8\6853166b9553bb500860233db274f93560c021c5
 K
 src/main/webapp/js/login.js,1\9\19241706d266f801bf2aad2bf0f1805a05206a32
 [
@@ -82,9 +62,5 @@ I
 src/main/webapp/login.jsp,8\5\85ee523d01e5e19376db640e846c91bbcb0a1c22
 Y
 )src/main/webapp/recuperar-senha-email.jsp,d\4\d4bb371f8a50ef41d9ecda7ba820029e0ff00e0b
-S
-#src/main/webapp/recuperar-senha.jsp,c\7\c7898e516ba5aa0a9393dbcaff483dfe614b4781
-K
-src/main/webapp/js/admin.js,b\1\b136be9c2578205eb281987d927b5341429b31e7
 P
  src/main/webapp/css/conteudo.css,9\6\96fc60282c22163436972c36f34b286c7a26025b

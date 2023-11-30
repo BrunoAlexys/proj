@@ -59,7 +59,7 @@ public class Conteudo {
     private List<Avaliacoes> listAvaliacoes;
 
     public Conteudo(String titulo, String descricao, String diretor, String duracao, String temporadas, String genero,
-                    LocalDate dataDeLancamento, String urlImg, String urlTrailer, String tipoConteudo) {
+                    LocalDate dataDeLancamento, String img, String urlTrailer, String tipoConteudo) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.diretor = diretor;
@@ -67,7 +67,7 @@ public class Conteudo {
         this.temporadas = temporadas;
         this.genero = genero;
         this.dataDeLancamento = dataDeLancamento;
-        this.urlImg = urlImg;
+        this.urlImg = img;
         this.urlTrailer = urlTrailer;
         this.ativo = true;
         this.tipoConteudo = tipoConteudo;

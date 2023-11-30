@@ -2,8 +2,11 @@ package br.com.cine.model.service;
 
 import java.sql.SQLException;
 import java.util.Optional;
+
 import br.com.cine.model.entities.Usuario;
 import br.com.cine.model.repository.UsuarioRepository;
+
+import javax.servlet.http.HttpSession;
 
 public class UsuarioService {
     private UsuarioRepository usuarioRepository;
@@ -46,4 +49,6 @@ public class UsuarioService {
     public void excluirUsuario(Long id) throws SQLException {
         usuarioRepository.excluirUsuarioPeloId(id);
     }
+
 }
+

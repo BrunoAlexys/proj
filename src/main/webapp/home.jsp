@@ -56,7 +56,7 @@
                 <li>Filmes</li>
             </a>
 
-            <a href="cine?action=SeriesBean">
+            <a href="cine?action=ListarSeriesBean">
                 <li>Series</li>
             </a>
 

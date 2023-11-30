@@ -12,6 +12,12 @@
     <title>Title</title>
 </head>
 <body>
+<%
+    // Recuperar o ID da série da URL
+    String serieId = request.getParameter("id");
+    // Convertendo o ID para Long (se necessário)
+    Long id = (serieId != null && !serieId.isEmpty()) ? Long.parseLong(serieId) : null;
+%>
 <header>
     <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <nav>
@@ -71,7 +77,7 @@
 
 <div class="wrapper">
     <h3>Avaliações</h3>
-    <form action="#">
+    <form action="cine?action=AvaliacaoBean" method="post">
         <div class="rating">
             <input type="number" name="rating" hidden>
             <i class='bx bx-star star' style="--i: 0;"></i>
@@ -80,7 +86,9 @@
             <i class='bx bx-star star' style="--i: 3;"></i>
             <i class='bx bx-star star' style="--i: 4;"></i>
         </div>
+        <input class="input" type="text" placeholder="Titulo da avaliação" name="titulo">
         <textarea name="opinion" cols="30" rows="5" placeholder="Sua opinião..."></textarea>
+        <input type="hidden" name="serieId" value="<%= id %>">
         <div class="btn-group">
             <button type="submit" class="btn submit">Enviar</button>
             <button class="btn cancel">Cancel</button>
@@ -115,7 +123,7 @@
             </div>
         </c:forEach>
     </div>
-    <div class="indicator">
+    <div class="indicator"></div>
 </div>
 <footer>
     <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>

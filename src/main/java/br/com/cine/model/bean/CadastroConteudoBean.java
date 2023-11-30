@@ -5,10 +5,12 @@ import java.time.LocalDate;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import br.com.cine.controller.TipoAcao;
 import br.com.cine.model.entities.Conteudo;
 import br.com.cine.model.service.ConteudoService;
+import org.apache.commons.codec.binary.Base64;
 
 public class CadastroConteudoBean implements TipoAcao {
 
@@ -50,8 +52,8 @@ public class CadastroConteudoBean implements TipoAcao {
                 this.resp.sendRedirect("cine?action=ListarConteudoBean");
                 throw new IllegalArgumentException("Tipo de conteudo invalido");
             }
-        } catch (IllegalArgumentException e) {
-            System.out.println("Erro: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
