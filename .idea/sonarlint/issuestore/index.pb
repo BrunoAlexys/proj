@@ -14,16 +14,12 @@ b
 2src/main/java/br/com/cine/controller/TipoAcao.java,6\e\6e7ddd3ab340719e89030b74421488293a8f603c
 m
 =src/main/java/br/com/cine/model/bean/CadastroUsuarioBean.java,6\6\66a06e86ec75ae486e54c70fe08d0e88e0e1fe18
-y
-Isrc/main/java/br/com/cine/model/bean/EnviarRecuperacaoSenhaEmailBean.java,4\f\4fd6c8c276f54646ec3f2ac7a1f6dd25710bc1df
 j
 :src/main/java/br/com/cine/model/bean/FormCadastroBean.java,b\9\b92641899341a885d643f8d30c759a100fd9fe36
 g
 7src/main/java/br/com/cine/model/bean/LoginFormBean.java,c\9\c931ae25e549e35b70ffacb5154f597cfbb19000
 l
 <src/main/java/br/com/cine/model/bean/RecuperarSenhaBean.java,0\a\0a8a5daf0f3001d6c23a9c73e64047981bf30f6c
-q
-Asrc/main/java/br/com/cine/model/bean/RecuperarSenhaEmailBean.java,a\2\a20acb809da2fbb8d86b8aff4ba7276a9bdc12e9
 j
 :src/main/java/br/com/cine/model/bean/ResetarSenhaBean.java,d\d\ddb0701e9a2fbd0cc1bfe3282e9ab6dfd7a6eea8
 r
@@ -58,8 +54,6 @@ U
 %src/main/webapp/js/recuperar-senha.js,9\3\933058e60366cc17f8f9e5974a51d29e8dd65045
 Q
 !src/main/webapp/js/selecionado.js,9\b\9b5c65e3151cc5f822e566306ba6a339ea6de3c7
-I
-src/main/webapp/login.jsp,8\5\85ee523d01e5e19376db640e846c91bbcb0a1c22
 Y
 )src/main/webapp/recuperar-senha-email.jsp,d\4\d4bb371f8a50ef41d9ecda7ba820029e0ff00e0b
 P

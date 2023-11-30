@@ -24,7 +24,9 @@ public class CineController extends HttpServlet {
                 || action.equalsIgnoreCase("HomeBean") || action.equalsIgnoreCase("CadastroUsuarioBean")
                 || action.equalsIgnoreCase("FilmesBean") || action.equalsIgnoreCase("SeriesBean")
                 || action.equalsIgnoreCase("ListarSeriesBean") || action.equalsIgnoreCase("ListarAvaliacaoBean")
-                || action.equalsIgnoreCase("SelecionadoBean"));
+                || action.equalsIgnoreCase("SelecionadoBean") || action.equalsIgnoreCase("RecuperarSenhaBean")
+                || action.equalsIgnoreCase("RecuperarSenhaEmailBean") || action.equalsIgnoreCase("ResetarSenhaBean")
+                || action.equalsIgnoreCase("EnviarRecuperacaoSenhaEmailBean"));
 
         if (isLogado && isProtected) {
             resp.sendRedirect("cine?action=LoginFormBean");
