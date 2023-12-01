@@ -37,10 +37,10 @@ public class ListarSelecionadoLogadoBean implements TipoAcao {
 
         try {
             conteudo = service.buscarPeloID(id);
-            listConteudo = avaliacaoService.listarAvaliacao();
+            listConteudo = avaliacaoService.buscarAvaliacaoPorID(id);
             if (conteudo.isPresent()) {
                 this.req.setAttribute("conteudo", conteudo);
-                this.req.setAttribute("listConteudo", listConteudo);
+                this.req.setAttribute("avaliacao", listConteudo);
                 RequestDispatcher dispatcher = this.req.getRequestDispatcher("/selecionado-logado.jsp");
                 dispatcher.forward(this.req, this.resp);
             }

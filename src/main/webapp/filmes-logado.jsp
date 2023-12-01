@@ -11,10 +11,10 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
+    <h1 style="color: #F5F5F5">Cine Sinnergy</h1>
     <nav>
         <ul>
-            <a href="cine?action=HomeLogadoBean">
+            <a href="cine?action=ListaHomeLogadoBean">
                 <li>Home</li>
             </a>
 
@@ -28,7 +28,8 @@
 
             <button id="optionsButton"><i class="fas fa-user"></i></button>
             <div id="options-container">
-                <div class="option" onclick="window.location.href='cine?action=FormAlterarUsuarioBean'" onclick="Alterar()">Alterar</div>
+                <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
+                <div class="option" onclick="window.location.href='cine?action=RecuperarSenhaEmailBean'" onclick="Alterar()">Alterar Senha</div>
                 <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
 
                 <script src="js/home-logado.js"></script>
@@ -52,7 +53,6 @@
     </div>
 </div>
 <footer>
-    <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>
 </footer>
 

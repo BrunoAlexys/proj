@@ -7,17 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class FilmesBean implements TipoAcao {
+public class FormConteudoBean implements TipoAcao {
     private HttpServletRequest req;
     private HttpServletResponse resp;
 
-    public FilmesBean(HttpServletRequest req, HttpServletResponse resp) {
+    public FormConteudoBean(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
 
+
     @Override
     public void execute() throws ServletException, IOException {
-        this.resp.sendRedirect("filmes.jsp");
+        this.resp.sendRedirect("form-conteudo.jsp");
     }
 }

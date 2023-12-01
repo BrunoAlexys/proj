@@ -34,13 +34,75 @@ header {
 
 .logoh1 {
     text-align: center;
-    margin-left: 420px; /* Ajuste o valor conforme necessário */
+    margin-left: 200px;
 }
 
 
 h1 {
     text-align: center;
 }
+
+#optionsButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    z-index: 2;
+}
+
+#optionsButton:hover{
+    color: #d21617;
+}
+
+#options-container {
+    color: black;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    background: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+}
+
+#options-container :hover{
+    color: #000;
+}
+
+.option{
+    border-radius: 20px;
+    border: 1px solid #d21617;
+    background-color: #d21617;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.option:active {
+    transform: scale(0.95);
+}
+
+.option:focus {
+    outline: none;
+}
+
+.option.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
 
 .user-icon {
     margin-left: 10px;
@@ -57,7 +119,8 @@ h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
-    margin-left: auto;
+    margin-right: 15px;  /* Espaçamento entre os botões */
+    display: inline-block;
 }
 
 .btn-cadastrar:active {

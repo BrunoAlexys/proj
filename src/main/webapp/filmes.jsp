@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
+    <h1 style="color: #F5F5F5">Cine Sinnergy</h1>
     <nav>
         <ul>
             <a href="cine?action=ListaHomeBean">
@@ -50,7 +50,6 @@
 </div>
 
 <footer>
-    <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>
 </footer>
 

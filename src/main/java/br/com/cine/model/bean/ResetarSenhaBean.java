@@ -32,16 +32,13 @@ public class ResetarSenhaBean implements TipoAcao {
             Optional<Usuario> usuarioEncontrado = service.buscarUsuarioPorEmail(emailUsuario);
 
             if (usuarioEncontrado.isPresent() &&
-                    Objects.equals(usuarioEncontrado.get().getCodigoRecuperacao(), codigoRecuperacao) &&
-                    Objects.equals(newPassword, confirmPassword)) {
+                    usuarioEncontrado.get().getCodigoRecuperacao().equalsIgnoreCase(codigoRecuperacao) && Objects.equals(newPassword, confirmPassword)) {
+                usuarioEncontrado.get().setSenha(newPassword);
                 Usuario usuario = usuarioEncontrado.get();
                 usuario.setSenha(newPassword);
-                usuario.setCodigoRecuperacao(null);
-
                 service.alterarUsuario(usuario);
+                this.resp.sendRedirect("cine?action=LoginFormBean");
             }
-
-            resp.sendRedirect("cine?action=LoginFormBean");
 
         } catch (Exception e) {
             // Tratar exceções apropriadas aqui, como logar ou redirecionar para uma página de erro.

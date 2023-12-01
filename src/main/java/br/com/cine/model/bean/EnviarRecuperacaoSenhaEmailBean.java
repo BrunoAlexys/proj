@@ -39,7 +39,7 @@ public class EnviarRecuperacaoSenhaEmailBean implements TipoAcao {
 
     @Override
     public void execute() throws IOException {
-        String emailUsuario = req.getParameter("email");
+        String emailUsuario = this.req.getParameter("email");
 
         try {
             Optional<Usuario> usuarioEncontrado = usuarioService.buscarUsuarioPorEmail(emailUsuario);

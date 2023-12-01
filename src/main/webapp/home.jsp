@@ -51,7 +51,7 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="./img/WhatsApp Image 2023-11-22 at 16.13.48.jpeg"/>
+    <h1 style="color: #F5F5F5">Cine Sinnergy</h1>
     <nav>
         <ul>
             <a href="cine?action=ListaHomeBean">
@@ -120,7 +120,6 @@
 </div>
 
 <footer>
-    <img style="object-fit: contain;" id="logo" src="./src/imagens/WhatsApp Image 2023-10-28 at 16.29.28.jpeg"/>
     <span>Todos os direitos resevados</span>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

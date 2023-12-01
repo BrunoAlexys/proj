@@ -15,13 +15,15 @@ public class AvaliacoesRepository implements IAvaliacoesRepository {
     }
 
     @Override
-    public Optional<Avaliacoes> buscarAvaliacaoPorID(Long id) throws SQLException {
+    public List<Avaliacoes> buscarAvaliacaoPorID(Long id) throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(manager -> {
-            return Optional.ofNullable(
-                    manager.createQuery("from Avaliacoes a where a.id = :id and a.ativo = true", Avaliacoes.class)
-                            .setParameter("id", id).getSingleResult());
+            return manager.createQuery("from Avaliacoes a where a.conteudo.id = :id and a.ativo = true", Avaliacoes.class)
+                    .setParameter("id", id)
+                    .getResultList();
         });
     }
+
+
 
     public List<Avaliacoes> listarAvaliacoes() throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(manager -> {

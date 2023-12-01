@@ -39,8 +39,8 @@
     <form id="cadastroForm" action="cine?action=AtualizarConteudoBean" method="post">
         <label for="tipoConteudo">Tipo do Conteúdo:</label>
         <select name="tipoConteudo" id="tipoConteudo" onchange="exibirCamposEspecificos()">
-            <option value="${cont.get().tipoConteudo}">Filmes</option>
-            <option value="${cont.get().tipoConteudo}">Séries</option>
+            <option value="Filmes" ${cont.get().tipoConteudo == 'Filmes' ? 'selected' : ''}>Filmes</option>
+            <option value="Series" ${cont.get().tipoConteudo == 'Series' ? 'selected' : ''}>Séries</option>
         </select>
 
         <label for="titulo">Titulo:</label>
@@ -83,6 +83,23 @@
 
     </form>
 </div>
+<script>
+    function exibirCamposEspecificos() {
+        var tipoConteudo = document.getElementById("tipoConteudo").value;
+        var temporadasDiv = document.getElementById("temporadasDiv");
+        var duracaoDiv = document.getElementById("duracaoDiv");
+
+        if (tipoConteudo === "Filmes") {
+            temporadasDiv.style.display = "none";
+            duracaoDiv.style.display = "block";
+        } else if (tipoConteudo === "Series") {
+            temporadasDiv.style.display = "block";
+            duracaoDiv.style.display = "none";
+        }
+        // Adicione mais casos conforme necessário para outros tipos de conteúdo
+    }
+
+</script>
 <script src="js/form-conteudo.js"></script>
 </body>
 </html>

@@ -36,9 +36,9 @@ public class ListaHomeLogadoBean implements TipoAcao {
             e.printStackTrace();
         }
 
-        this.req.setAttribute("filmes", listFilmes);
-        this.req.setAttribute("series", listSeries);
-        this.req.setAttribute("top10", listTop10);
+        this.req.setAttribute("filmesLogado", listFilmes);
+        this.req.setAttribute("seriesLogado", listSeries);
+        this.req.setAttribute("top10Logado", listTop10);
 
         RequestDispatcher dispatcher = this.req.getRequestDispatcher("/home-logado.jsp");
         dispatcher.forward(this.req, this.resp);

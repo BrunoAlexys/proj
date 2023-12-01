@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class LoginBean implements TipoAcao {
-    private static final String ADMIN_EMAIL = "administrador@gmail.com";
+    private static final String ADMIN_EMAIL = "adm@gmail.com";
 
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
@@ -37,7 +37,7 @@ public class LoginBean implements TipoAcao {
                     resp.sendRedirect("cine?action=ListarConteudoBean");
                 } else if (notAdmin(usuarioEncontrado.get())) {
                     adicionarUsuarioNaSessao(usuarioEncontrado.get());
-                    resp.sendRedirect("cine?action=HomeLogadoBean");
+                    resp.sendRedirect("cine?action=ListaHomeLogadoBean");
                 }
             } else {
                 resp.sendRedirect("cine?action=LoginFormBean");

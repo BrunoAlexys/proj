@@ -13,7 +13,7 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
+    <h1 style="color: #F5F5F5">Cine Sinnergy</h1>
     <nav>
         <ul>
             <a href="cine?action=ListaHomeBean">
@@ -64,12 +64,15 @@
         <c:forEach items="${listConteudo}" var="avaliacao">
             <div class="card">
                 <div class="head">
-                    <div class="profile" >
-                        <p>${avaliacao.usuario.nome}</p>
+                    <div class="profile">
+                        <p style="color: #F5F5F5">${avaliacao.usuario.nome}</p>
                     </div>
                 </div>
                 <p class="review">
-                        ${avaliacao.avaliacao}
+                    <br>
+                    <strong>Autor: ${avaliacao.titulo}</strong>
+                    <br>
+                    <strong>${avaliacao.avaliacao}</strong>
                 </p>
             </div>
         </c:forEach>
@@ -77,28 +80,7 @@
     <div class="indicator"></div>
 </div>
 <footer>
-    <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>
-
-    <nav class="footer-navgation">
-        <ul class="footer-list">
-            <a href="./index.html">
-                <li>Home</li>
-            </a>
-
-            <a href="./Contato.html">
-                <li>Con tato</li>
-            </a>
-
-            <a href="./Fotos.html">
-                <li>Foto</li>
-            </a>
-
-            <a href="./Comentario.html">
-                <li>Comentário</li>
-            </a>
-        </ul>
-    </nav>
 </footer>
 <script>
     const allStar = document.querySelectorAll('.rating .star')

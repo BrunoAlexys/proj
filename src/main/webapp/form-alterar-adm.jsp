@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="arrow" onclick="goBack()">
-    <a href="cine?action=ListaHomeLogadoBean"><i class="fas fa-arrow-left"></i></a>
+    <a href="cine?action=ListarConteudoBean"><i class="fas fa-arrow-left"></i></a>
 </div>
 <div class="container" id="container">
 
@@ -18,15 +18,14 @@
             <span>aqui você pode alterar suas informações</span>
             <input type="text" name="firstname" value="${usuario.get().nome}" placeholder="Name"/>
             <input type="text" name="lastname" value="${usuario.get().sobrenome}" placeholder="surname"/>
-            <input type="password" name="password" placeholder="Password"/>
             <input type="date" value="${usuario.get().dataDeNascimento}" name="date" placeholder="date"/>
             <select id="sexo" name="genero">
-                <option value="" disabled selected>Selecione uma opção</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outros">Outros</option>
+                <option disabled>Selecione uma opção</option>
+                <option value="Masculino" ${usuario.get().genero == 'Masculino' ? 'selected' : ''}>Masculino</option>
+                <option value="Feminino" ${usuario.get().genero == 'Feminino' ? 'selected' : ''}>Feminino</option>
+                <option value="Outros" ${usuario.get().genero == 'Outros' ? 'selected' : ''}>Outros</option>
             </select>
-            <a href="cine?action=ListarHomeLogadaBean">Cancelar</a>
+            <a href="cine?action=ListarConteudoBean">Cancelar</a>
             <button type="submit">Alterar</button>
         </form>
     </div>

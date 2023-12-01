@@ -7,16 +7,16 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-in-container">
-        <form action="cine?action=ResetarSenhaBean" method="post" id="resetForm" onsubmit="return validateSenha();">
+        <form action="cine?action=ResetarSenhaBean" method="post" id="resetForm" >
             <h1>Redefinir senha</h1>
 
             <input type="hidden" name="email" id="email" value="<%= request.getParameter("email") %>">
             <label for="emailCode">Código de Recuperação</label>
             <input type="text" name="emailCode" id="emailCode" placeholder="Código de Recuperação" required="required"/>
             <label for="newPassword">Nova senha</label>
-            <input type="password" id="newPassword" placeholder="Password" required="required"/>
+            <input type="password" name="newPassword" id="newPassword" placeholder="Password" required="required"/>
             <label for="confirmPassword">Confirmar senha</label>
-            <input type="password" id="confirmPassword" placeholder="Password" required="required"/>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Password" required="required"/>
             <a href="cine?action=LoginFormBean">Cancelar</a>
             <button type="submit" id="resetButton">Redefinir</button>
         </form>

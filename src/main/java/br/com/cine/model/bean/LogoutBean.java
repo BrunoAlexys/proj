@@ -22,6 +22,6 @@ public class LogoutBean implements TipoAcao {
         HttpSession session = this.req.getSession();
         session.invalidate();
 
-        this.resp.sendRedirect("cine?action=HomeBean");
+        this.resp.sendRedirect("cine?action=ListaHomeBean");
     }
 }

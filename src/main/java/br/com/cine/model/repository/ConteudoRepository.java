@@ -41,10 +41,11 @@ public class ConteudoRepository implements IConteudoRepository {
     public List<Conteudo> listarTop10() throws SQLException {
         return TransacaoUtil.executarTransacaoComRetorno(maneger -> {
             return maneger.createQuery("SELECT DISTINCT c FROM Conteudo c " +
-                    "JOIN c.listAvaliacoes a " +
-                    "GROUP BY c " +
-                    "ORDER BY AVG(a.classificacao) DESC " +
-                    "LIMIT 10 ", Conteudo.class).getResultList();
+                            "JOIN c.listAvaliacoes a " +
+                            "GROUP BY c " +
+                            "ORDER BY AVG(a.classificacao) DESC", Conteudo.class)
+                    .setMaxResults(10) // Define o número máximo de resultados
+                    .getResultList();
         });
     }
 

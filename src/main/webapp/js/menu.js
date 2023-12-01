@@ -6,3 +6,4 @@ document.getElementById('optionsButton').addEventListener('click', function() {
 function goBack() {
     window.history.back();
 }
+

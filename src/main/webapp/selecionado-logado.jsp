@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,10 +13,10 @@
 </head>
 <body>
 <header>
-    <img id="logo" src="./src/imagens/transparent-movie-5.png"/>
+    <h1 style="color: #F5F5F5">Cine Sinnergy</h1>
     <nav>
         <ul>
-            <a href="cine?action=HomeLogadoBean">
+            <a href="cine?action=ListaHomeLogadoBean">
                 <li>Home</li>
             </a>
 
@@ -31,7 +30,9 @@
 
             <button id="optionsButton"><i class="fas fa-user"></i></button>
             <div id="options-container">
-                <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'" onclick="Alterar()">Alterar</div>
+                <div class="option" onclick="window.location.href='cine?action=ListarUsuarioPorIDBean'"
+                     onclick="Alterar()">Alterar
+                </div>
                 <div class="option" onclick="window.location.href='cine?action=LogoutBean'" onclick="sair()">Sair</div>
             </div>
         </ul>
@@ -46,7 +47,7 @@
 <div id="trailer-conteiner">
     <div class="content">
         <video controls class="Trailer">
-            <source src="${conteudo.get().urlTrailer}" type="video/mp4">
+            <iframe width="560" height="315" src="${conteudo.get().urlTrailer}" frameborder="0" allowfullscreen></iframe>
             Seu navegador não tem suporte para videos
         </video>
         <div id="sinopse">
@@ -81,7 +82,7 @@
             <input type="radio" name="rating" value="4" id="star4">
             <label for="star4" class='bx bx-star star' style="--i: 4;"></label>
         </div>
-        <input class="input" type="text" placeholder="Titulo da avaliação" name="titulo">
+        <input class="input" type="text" placeholder="Autor" name="titulo">
         <textarea name="opinion" cols="30" rows="5" placeholder="Sua opinião..."></textarea>
         <input type="hidden" name="conteudoID" value="${conteudo.get().id}">
         <div class="btn-group">
@@ -92,15 +93,18 @@
 </div>
 <div class="container">
     <div class="card-wrapper">
-        <c:forEach items="${listConteudo}" var="avaliacao">
+        <c:forEach items="${avaliacao}" var="avaliacao">
             <div class="card">
                 <div class="head">
-                    <div class="profile" >
-                        <p>${avaliacao.usuario.nome}</p>
+                    <div class="profile">
+                        <p style="color: #F5F5F5">${avaliacao.usuario.nome}</p>
                     </div>
                 </div>
                 <p class="review">
-                        ${avaliacao.avaliacao}
+                    <br>
+                    <strong>Autor: ${avaliacao.titulo}</strong>
+                    <br>
+                    <strong>${avaliacao.avaliacao}</strong>
                 </p>
             </div>
         </c:forEach>
@@ -108,28 +112,7 @@
     <div class="indicator"></div>
 </div>
 <footer>
-    <img style="object-fit: contain;" id="logo" src="./src/imagens/transparent-movie-5.png"/>
     <span>Todos os direitos resevados</span>
-
-    <nav class="footer-navgation">
-        <ul class="footer-list">
-            <a href="./index.html">
-                <li>Home</li>
-            </a>
-
-            <a href="./Contato.html">
-                <li>Con tato</li>
-            </a>
-
-            <a href="./Fotos.html">
-                <li>Foto</li>
-            </a>
-
-            <a href="./Comentario.html">
-                <li>Comentário</li>
-            </a>
-        </ul>
-    </nav>
 </footer>
 <script>
     const allStar = document.querySelectorAll('.rating .star')

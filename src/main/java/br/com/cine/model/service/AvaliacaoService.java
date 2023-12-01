@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 import br.com.cine.model.entities.Avaliacoes;
 import br.com.cine.model.entities.Conteudo;
-import br.com.cine.model.entities.Usuario;
 import br.com.cine.model.repository.AvaliacoesRepository;
 
 
@@ -35,7 +34,7 @@ public class AvaliacaoService {
         }
     }
 
-    public Optional<Avaliacoes> buscarAvaliacaoPorID(Long id) throws SQLException {
+    public List<Avaliacoes> buscarAvaliacaoPorID(Long id) throws SQLException {
         return avaliacoesRepository.buscarAvaliacaoPorID(id);
     }
 
